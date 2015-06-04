@@ -1,0 +1,84 @@
+/* caiters.com styles */
+
+.transition(@args) {
+  -webkit-transition: @args;
+  -moz-transition: @args;
+  -o-transition: @args;
+  transition: @args;
+}
+
+* + * { margin-top: 1em; }
+
+#wrapper { width: 95%; margin: 0 auto; max-width: 1200px; color: #121212;
+	> section { margin: 80px 0; }
+}
+
+.main-nav { padding: 30px 0;
+  a { text-decoration: none; display: block; line-height: 80px; position: relative; text-align: center; color: #444; .transition(all 0.25s, background-position 0.5s;);
+    &:after { content: ''; opacity: 0; height: 2px; background: #ccc; max-width: 1px; .transition(all 0.25s); width: 100%; margin: 4px auto 0; display: block; }
+    &:hover { background-position: 0 100%; color: #666;
+      &:after { max-width: 100%; opacity: 1; }
+    }
+  }
+  li { margin-top: 0;
+    &.home {
+      a { color: #444; opacity: 1; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8429ce), color-stop(61%,#ce50ac), color-stop(100%,#751759)); background: -webkit-linear-gradient(top,  #8429ce 0%,#ce50ac 61%,#751759 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: 200%;
+        &:after { display: none; }
+        &:hover { color: #666; background-position: 0 50%;}
+      }
+    }
+  }
+}
+
+h1.page-header { text-align: center; font-family: 'proxima-nova', sans-serif; font-size: 30px; font-weight: 100; text-transform: uppercase; margin-bottom: 0;
+	span { display: block; font-size: 24px;}
+}
+
+body { font-family: 'Open Sans', sans-serif; }
+
+.page-title { color: #ccc; text-align: center; font-weight: normal; text-transform: uppercase;
+  span { font-size: 14px; }
+}
+
+#main {
+  ul { list-style: none outside; margin: 0; padding: 0; text-align: center; display: flex; flex-direction: row; }
+  li { flex-grow: 1; }
+  a { text-decoration: none; display: block; line-height: 80px; transition: all 0.3s; }
+}
+
+#portfolio {
+	ul { list-style: none outside; margin: 0; padding: 0; text-align: center; }
+	li { display: inline-block; }
+	img { display: block; border: 2px solid #fff; .transition(border-color 0.2s); }
+	a:hover {
+		img { border-color: #d2d2d2; }
+	}
+	h3 { text-align: center;
+		a { color: #2ab25d; text-decoration: none; text-transform: uppercase; font-family: 'proxima-nova', sans-serif; .transition(color 0.2s);
+			&:hover { color: #121212; }
+		}
+	}
+	.additional-projects { display: none; }
+}
+
+#resume { font-size: 14px;
+	.learning {
+		span { font-size: 12px; color: #666; }
+	}
+	li + li { margin: 0; line-height: 1.5; }
+	h2 {}
+	h3 { text-align: left; font-family: 'proxima-nova', sans-serif; font-size: 28px; font-weight: 100; text-transform: uppercase; }
+	h4 { text-align: left; font-family: 'proxima-nova', sans-serif; font-size: 24px; font-weight: 400; text-transform: uppercase; margin-bottom: 0.25em; }
+}
+
+section h2 { text-align: center; font-family: 'proxima-nova', sans-serif; font-size: 30px; font-weight: 100; text-transform: uppercase; }
+
+.home a { font-family: 'aw-conqueror-carved', serif; font-size: 80px; padding-right: 18px;}
+
+@media (min-width: 850px) {
+	#resume {
+		.comfortable, .learning { width: 50%; float: left; box-sizing: border-box; margin: 0; }
+		.comfortable { padding-right: 1em; }
+		.learning { padding-left: 1em; }
+	}
+}
