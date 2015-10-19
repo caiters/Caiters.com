@@ -1,0 +1,39 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index');
+});
+
+/* GET resume page. */
+router.get('/resume', function(req, res, next) {
+  res.render('resume');
+});
+
+// portfolio
+router.get('/portfolio', function(req, res, next) {
+  res.render('portfolio');
+});
+
+// about
+router.get('/about', function(req, res, next) {
+  res.render('about');
+});
+
+// contact
+router.get('/contact', function(req, res, next) {
+  res.render('contact');
+});
+
+// blog
+router.get('/blog', function(req, res, next) {
+  res.render('blog');
+});
+
+// blog articles
+router.get('/blog/:name', function(req, res, next){
+  res.render('blog/' + req.params.name)
+});
+
+module.exports = router;

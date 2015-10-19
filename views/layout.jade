@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,700')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style2.css')
+    script(src='http://use.typekit.net/vgo2cvm.js')
+    script(type='text/javascript').
+      try{Typekit.load();}catch(e){}
+  body
+    div.site-wrapper
+      header.main-header
+        a(href='/')
+          div.me
+            span.cb CB
+            strong Front End
+            span Developer
+        nav#mainNav.main-nav
+          ul
+            li
+              a(href='/portfolio') Portfolio
+              a(href='/resume') Resume
+              a(href='/blog') Blog
+              a(href='/about') About
+              a(href='/contact') Contact
+      div.main-content
+        block content

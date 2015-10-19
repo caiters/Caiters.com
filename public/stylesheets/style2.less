@@ -1,0 +1,94 @@
+/* Variables */
+@red: #ff415b;
+@yellow: #fff95f;
+@green: #5e8177;
+@purple: #3a305b; // rgba(58,48,91,1);
+@brightpurple: #683ef3;
+
+.transition(...) {
+  @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  -webkit-transition: @args;
+  -moz-transition: @args;
+  -o-transition: @args;
+  transition: @args;
+}
+
+.transition-delay(@args) {
+  -webkit-transition-delay: @args;
+  -moz-transition-delay: @args;
+  -o-transition-delay: @args;
+  transition-delay: @args;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'proxima-nova', sans-serif; }
+
+
+
+ul { margin: 0; }
+body { background: #000 url('/images/bg-texture.jpg') center top no-repeat; background-size: cover; font-family: 'Open Sans', sans-serif; min-height: 100vh; background-attachment: fixed; color: #fff; }
+
+header { text-align: center; padding:1rem; background: rgba(10,10,10,0.5); width: 100%;
+  .me {
+    span { transition: color 0.3s; text-transform: uppercase; display: block;  font-family: 'proxima-nova', sans-serif; font-size: 1.5rem; color: @red; }
+    span.cb { color: @red; text-transform: uppercase; font-size: 6rem; margin: 0 0 0.1rem; line-height: 1; font-family: 'aw-conqueror-carved', serif; font-weight: normal; transition: transform 0.5s; display: block; }
+    strong { color: @red; font-size: 1.5rem; text-transform: uppercase; margin:0.1rem 0 0; transition: color 0.3s; display: block; font-family: 'proxima-nova', sans-serif; }
+  }
+  > a {
+   &:hover {
+     .me {
+       span { color: @yellow; }
+       span.cb { color: @brightpurple; }
+       strong { color:@green; }
+     }
+   }
+ }
+}
+
+.site-wrapper { min-height: 100vh; }
+
+a { color: @yellow; text-decoration: none; }
+.main-nav { text-align: left; margin-top: 2rem; text-transform: uppercase;
+  ul { list-style: none outside; margin: 0 auto; padding: 0; max-width: 130px; }
+  li { margin: 0 0 0.5em; }
+  a { display: block; transition: transform 0.3s, color 0.3s;
+    &:hover { transform: translateX(5px); color: @brightpurple; }
+  }
+}
+
+.portfolio { list-style: none outside; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1055px;
+  li { width: 265px; display: inline-block; position: relative; margin-bottom: 50px;
+    &:after { position: absolute; content: ''; background: transparent url('/images/galaxy.png') left top no-repeat; top: -80px; left: -78px; width: 412px; height: 346px; opacity: 0; .transition(opacity 1s); }
+    strong {  opacity: 0; .transition(opacity 0.25s, transform 0.25s); color: #fff; position: absolute;  width: 100%; text-align: center; font-size: 30px; text-transform: uppercase; margin-top: 15px; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; }
+    a { display: block; background: #000; overflow: hidden; position: relative; z-index: 1;
+      &:hover {
+        img { opacity: 0.4; }
+        strong { opacity: 1; transform: translateY(-5px); }
+      }
+    }
+    img { width: 265px; height: 213px; display: block; .transition(opacity 0.2s); }
+    &:hover {
+
+      &:after { opacity: 1; }
+
+    }
+  }
+}
+
+.social-nav { margin-top: 2rem; text-align: left;
+  ul { list-style: none outside; margin: 0 auto; padding: 0; max-width: 130px; }
+  li { margin: 0 0 0.5em; width: 30px; overflow: hidden; float: left; }
+  a { color: @red; transition: transform 0.3s, color 0.3s;
+    &:hover { transform: translateX(5px); color: @brightpurple; }
+  }
+}
+
+.main-content { width: 100%; padding: 2rem; }
+
+@media (min-width:768px){
+  header { max-width: 200px; display: flex; flex-direction: column; justify-content: center; height: 100vh; position: fixed; }
+  .site-wrapper { display: flex; }
+  .main-content {margin-left: 250px;}
+}
+
+
+// background image from https://dribbble.com/RoundedHexagon

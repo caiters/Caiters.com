@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  h1 Pfister Xtract
+  p This project was a set of responsive landing pages using animation and audio clips to tell a story about common water contaminants and how this faucet can help filter them out.
+  ul
+    li
+      strong CMS:
+      | Sitefinity
+    li
+      strong Browser Support:
+      | IE8+ (Audio clips and references to audio were hidden in IE8)
+  p.
+    This was a really fun project! I got to experiment with fun interactions to add life to the pages (such as the little jobbies peeking from the bottom of the panel when you hover over
+    the play button on the main page) and also had the opportunity to experiment with some animation. At first I considered doing the animation in CSS, but ultimately decided to use
+    animated gifs since we knew animated gifs have good browser support and we don't need to control the particulars of each animation (it can just repeat exactly the same way, forever).
+  p.
+    I also experimented at first with using CSS animation for the jobbies moving around - after some time of playing with it though, I wasn't sure I would be able to do what I wanted (at
+    least within a reasonable amount of time) so I looked for a javascript animation library that would be able to help. That's how I found GSAP!
+
+  <!--
+    Pfister Xtract
+    Stuff I want to say about the project:
+      Intro: Responsive website using animation and audio clips to tell a story about common water contaminants and how this faucet can help filter them out
+      - IE8+ (audio and references to audio are removed for IE8)
+      - experimenting with interaction (jobbies peeking up from the edge when you hover over play button, jobbies replacing dull icons in What Gets Filtered)
+      - experimenting with animation (jobbie floating in glass and floating to top when you listen to audio)
+      - html5 audio (wish I had implemented a loading indicator)
+      - I experimented with CSS animation at first, but ultimately we decided to use GIFs and GSAP for wider support
+      - CMS: Sitefinity
+  -->
