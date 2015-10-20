@@ -12,8 +12,13 @@ router.get('/resume', function(req, res, next) {
 });
 
 // portfolio
-router.get('/portfolio', function(req, res, next) {
-  res.render('portfolio');
+router.get('/projects', function(req, res, next) {
+  res.render('projects');
+});
+
+// portfolio items
+router.get('/projects/:name', function(req, res, next){
+  res.render('projects/' + req.params.name)
 });
 
 // about
@@ -35,5 +40,7 @@ router.get('/blog', function(req, res, next) {
 router.get('/blog/:name', function(req, res, next){
   res.render('blog/' + req.params.name)
 });
+
+
 
 module.exports = router;

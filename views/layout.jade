@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= title
+    title Caitlin Bailey, Front End Web Developer
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,700')
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style2.css')
@@ -11,18 +11,21 @@ html
   body
     div.site-wrapper
       header.main-header
-        a(href='/')
-          div.me
-            span.cb CB
-            strong Front End
-            span Developer
+        a.site-title(href='/')
+          span.site-title__cb CB
+          strong.site-title__fe Front End
+          span.site-title__dev Developer
         nav#mainNav.main-nav
-          ul
-            li
-              a(href='/portfolio') Portfolio
-              a(href='/resume') Resume
-              a(href='/blog') Blog
-              a(href='/about') About
-              a(href='/contact') Contact
+          ul.main-nav__list
+            li.main-nav__item
+              a.main-nav__link(href='/portfolio') Portfolio
+            li.main-nav__item
+              a.main-nav__link(href='/resume') Resume
+            li.main-nav__item
+              a.main-nav__link(href='/blog') Blog
+            li.main-nav__item
+              a.main-nav__link(href='/about') About
+            li.main-nav__item
+              a.main-nav__link(href='/contact') Contact
       div.main-content
         block content
