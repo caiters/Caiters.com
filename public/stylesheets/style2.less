@@ -20,7 +20,7 @@
   transition-delay: @args;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'proxima-nova', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'factoria', sans-serif; font-weight: 400; }
 
 
 
@@ -42,6 +42,9 @@ body { background: #000 url('/images/bg-texture.jpg') center top no-repeat; back
 
 .site-wrapper { min-height: 100vh; }
 
+// right content wrapper
+.content-wrapper { max-width: 1200px; margin: 0 auto; }
+
 a { color: @yellow; text-decoration: none; }
 
 // main nav
@@ -55,12 +58,12 @@ a { color: @yellow; text-decoration: none; }
 // the main title of a page
 .page-title { font-size: 3rem;}
 
-.featured-work { margin: 3rem 0; 
-  &__header { text-align: center; text-transform: uppercase; }
+.featured-work { margin: 3rem 0;
+  &__header { text-align: center; text-transform: uppercase; position: relative; z-index: 2;}
 }
 
 // a list of projects
-.project-list { list-style: none outside; margin: 0 auto; padding: 0 80px; display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1055px; }
+.project-list { list-style: none outside; margin: 50px auto; padding: 0 80px; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
 // project block
 .project { width: 265px; display: inline-block; position: relative; margin-bottom: 50px;
