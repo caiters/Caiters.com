@@ -1,10 +1,12 @@
 extends layout
 
 block content
-  h1 Caitlin Bailey, Front End Web Developer
+  h1.page-title Caitlin Bailey, Front End Web Developer
   p If I'm not careful, I'll lose motivation to make this website and start playing Diablo again. So let's get to it!
-  h2 Featured Work
-  include includes/featured-projects.jade
+  section.featured-work
+    h2.featured-work__header Featured Work
+    include includes/featured-projects.jade
   
-  h2 Latest Blog Post
-  include includes/latest-post.jade
+  section.latest-blog
+    h2.latest-blog__header Latest Blog Post
+    include includes/latest-post.jade
