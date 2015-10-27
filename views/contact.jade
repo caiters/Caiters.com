@@ -3,6 +3,23 @@ extends layout
 block content
   h1 Contact
   p Contact page content goes here
+  form
+    fieldset
+      legend Contact me
+      
+      div.form-group
+        label(for='name') Name
+        input(type='text' id='name' name='name' placeholder='Name')
+      
+      div.form-group
+        label(for='email') Email
+        input(type='email' id='email' name='email' placeholder='Name')
+        
+      div.form-group
+        label(for='message') Your message
+        textarea(id='message' name='message' placeholder='Your message here')
+      
+      input(type='submit')
   
   h2 Social
   ul
