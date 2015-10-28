@@ -22,15 +22,18 @@
 
 h1, h2, h3, h4, h5, h6 { font-family: 'factoria', sans-serif; font-weight: 400; }
 
-
+.btn { background: @red; color: #fff; border: 2px solid darken(@red, 20%, relative); text-transform: uppercase; padding: 0.5em 1em; border-radius: 8px; .transition(background-color border-color 0.25s);
+  &:hover { background: darken(@red, 20%, relative); border-color: darken(@red, 40%, relative); }
+}
 
 ul { margin: 0; }
 body { background: #000 url('/images/bg-texture.jpg') center top no-repeat; background-size: cover; font-family: 'Open Sans', sans-serif; min-height: 100vh; background-attachment: fixed; color: #fff; }
 
-.main-header { text-align: center; padding:1rem; background: rgba(10,10,10,0.5); width: 100%;
+.main-header { text-align: center; padding:1rem; background: rgba(10,10,10,0.5); width: 100%; }
 
+.form-group { margin-bottom: 10px; }
+.form-label { text-transform: uppercase; display: block; }
 
-}
 
 // Site Title (in main nav)
 .site-title { color: @red; transition: color 0.3s;
