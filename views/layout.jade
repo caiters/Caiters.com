@@ -1,3 +1,6 @@
+block variables
+  - var containerClass = containerClass;
+
 doctype html
 html
   head
@@ -28,5 +31,9 @@ html
             li.main-nav__item
               a.main-nav__link(href='/contact') Contact
       div.main-content
-        div.content-wrapper
-          block content
+        - if (containerClass)
+          div(class="content-wrapper content-wrapper--#{containerClass}")
+            block content
+        - else
+          div(class="content-wrapper")
+            block content
