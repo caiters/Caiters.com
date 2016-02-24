@@ -28,6 +28,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'factoria', sans-serif; font-weight: 400; 
 
 .btn { background: @red; color: #fff; border: 2px solid darken(@red, 20%, relative); text-transform: uppercase; padding: 0.5em 1em; border-radius: 5px; .transition(background-color border-color 0.25s);
   &:hover { background: darken(@red, 20%, relative); border-color: darken(@red, 40%, relative); }
+  &--outline { background: transparent; color: #fff; border-color: #fff;
+    &:hover { background: #000; border-color: #000; }
+  }
+  &--centered { margin-left: auto; margin-right: auto; }
 }
 
 ul { margin: 0; }
@@ -77,12 +81,12 @@ img { max-width: 100%; }
 // the main title of a page
 .page-title { font-size: 3rem;}
 
-.featured-work { margin: 3rem 0;
+.featured-work { margin: 3rem 0; text-align: center;
   &__header { text-align: center; text-transform: uppercase; position: relative; z-index: 2;}
 }
 
 // a list of projects
-.project-list { list-style: none outside; margin: 50px auto; padding: 0 1em; display: flex; flex-wrap: wrap; justify-content: space-between; }
+.project-list { list-style: none outside; margin: 50px auto 0; padding: 0 1em; display: flex; flex-wrap: wrap; justify-content: space-between; }
 
 .project-list-text {}
 
