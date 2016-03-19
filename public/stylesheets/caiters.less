@@ -1,0 +1,155 @@
+@br-phone: 480px;
+@br-tablet: 768px;
+@br-desktop: 992px;
+@br-wide-desktop: 1200px;
+
+// weights
+@thin: 100;
+@light: 300;
+@regular: 400;
+@bold: 700;
+
+// stuff
+.transition(...) {
+  @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
+  -webkit-transition: @args;
+  -moz-transition: @args;
+  -o-transition: @args;
+  transition: @args;
+}
+
+.transition-delay(@args) {
+  -webkit-transition-delay: @args;
+  -moz-transition-delay: @args;
+  -o-transition-delay: @args;
+  transition-delay: @args;
+}
+
+.group {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+body { background: #f8f8f8; }
+
+img { max-width: 100%; }
+
+// margins
+.no-margins { margin: 0; }
+.no-b-margin { margin-bottom: 0; }
+.no-t-margin { margin-top: 0; }
+.auto-margin { margin-left: auto; margin-right: auto; }
+.section-margins { margin-top: 3em; margin-bottom: 3em; }
+
+// padding
+.section-padding { padding-top: 3em; padding-bottom: 3em; }
+
+// headings and other text treatments
+.kicker { font-size: 0.8em; text-transform: uppercase; margin: 0; font-weight: @regular; }
+
+.heading { font-family: 'brandon-grotesque'; font-weight: @thin;
+  &--kicker { .kicker; }
+  &--main { font-size: 3em; margin-top: 0; }
+}
+
+// buttons
+.btn {
+  &--outline { }
+}
+
+
+// whole site wrapper
+.site-wrapper {
+  @media (min-width: @br-tablet) {
+    display: flex;
+  }
+}
+
+// inner wrap
+.inner-wrap { max-width: 1000px; margin-left: auto; margin-right: auto; .group; padding-left: 1em; padding-right: 1em;
+  &--center-vert { display: flex; align-items: center; }
+}
+
+// main content area
+.main-content { width: 100%;
+  @media (min-width: @br-tablet) {
+    margin-left: 200px; margin-top: 0;
+  }
+}
+
+// site title in header
+.site-title { display: block;
+  &__cb { display: block; }
+  &__fe { display: block; }
+}
+
+//header
+.main-header { text-align: center; padding:1rem; background: #fff; width: 100%; box-sizing: border-box;
+  @media (min-width: @br-tablet) {
+    padding: 1rem; max-width: 200px; display: flex; flex-direction: column; justify-content: center; height: 100vh; position: fixed;
+  }
+}
+
+// main navigation
+.main-nav {
+  &__list { list-style: none outside; margin: 0; padding: 0; }
+  @media (min-width: @br-tablet) {
+
+    text-align: left;
+  }
+}
+
+// three column promo
+.trio {
+  &__col {
+    @media (min-width: 768px) {
+      width: 33.333333%; float: left;
+    }
+  }
+  // trio with image bg and text overlay on top
+  &--img { font-size: 0.9em;
+
+    @media (min-width: @br-phone) {
+      .trio__col { width: 33.333333%; float: left; box-sizing: border-box; text-align: center; padding-left: 0.5em; padding-right: 0.5em; }
+      a { color: #222; text-decoration: none; display: block; background: #fff; border: 1px solid #e6e6e6;}
+      span { display: block; padding: 1em; }
+    }
+    @media (min-width: @br-tablet) {
+      .trio__col { position: relative; }
+      img { display: block; width: 100%; }
+      span { position: absolute; top: 1em; left: 0; right: 0; z-index: 2;}
+      a { color: #fff; }
+    }
+  }
+}
+
+// homepage intro
+.intro { padding-top: 1em; padding-bottom: 1em;
+  @media (min-width:768px) {
+    width: 50%; float: left; font-size: 1.2em; font-family: 'open sans'; font-weight: 300;
+  }
+}
+
+// recent project
+.recent-project { background: transparent none center center no-repeat; background-size: cover; text-align: center; padding: 1em; min-height: 300px; display: flex;
+  &--wa { background-image: url('../images/banner-wa.jpg') }
+  a { color: #fff; text-decoration: none; display: flex; flex-direction: column; width: 100%; justify-content: center; }
+  // want the kicker to have a triangle pointing down
+  .heading--kicker { position: relative; margin-bottom: 1em;
+    &:after { border-top: 8px solid #fff; border-right: 5px solid transparent; border-left: 5px solid transparent; content: ''; position: absolute; left: 50%; bottom: -10px; margin-left: -4px; }
+  }
+  @media (min-width: 768px) {
+    position: relative;
+    .btn { display: block; opacity: 0; .transition(opacity 0.25s); position: absolute; bottom: 3em; left: 50%; transform: translateX(-50%); }
+    .heading { .transition(transform 0.3s); }
+    a {
+      &:hover {
+        .btn { opacity: 1; }
+        .heading { transform: translateY(-20px); }
+      }
+    }
+  }
+}

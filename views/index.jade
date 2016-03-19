@@ -4,18 +4,32 @@ block content
   
   // h1.page-title Caitlin Bailey, Front End Web Developer
   
-  section.featured-work
-    h2.featured-work__header Featured Work
-    include includes/featured-projects.jade
-    a.btn.btn--outline(href="/projects") View All Projects
+  section.recent-project.recent-project--wa
+    a(href="/projects/webadvanced")
+      h2.heading.heading--kicker Recent Project
+      h3.heading.heading--main.no-b-margin Web Advanced
+      span.btn.btn--outline View Project
+      
+  div.inner-wrap.inner-wrap--center-vert.section-margins
+    div.intro
+      p I wanted to do something I loved when I grew up.
+      p Front end development is that thing.
 
-  section.latest-blog
-    h2.latest-blog__header Latest Blog Post
-    include includes/latest-post.jade
-    a.btn(href="/blog") View All Posts
-
-  section.about-me
-    h2 About Me
-    p Some people are all, "Oh no, I work in front of a computer all day! I can't imagine wanting to get on the computer when I get home from work."
-    p I am not one of those people.
-    a.btn(href="/about") Read More
+    section.latest-blog
+      h1.heading.heading--kicker Latest Blog Post
+      include includes/latest-post.jade
+  
+  div.inner-wrap.section-margins
+    div.trio.trio--img.group
+      div.trio__col
+        a(href="/projects")
+          img(src="http://www.placehold.it/300x300/222")
+          span Project Portfolio
+      div.trio__col
+        a(href="/resume")
+          img(src="http://www.placehold.it/300x300/222")
+          span Resume
+      div.trio__col
+        a(href="/blog")
+          img(src="http://www.placehold.it/300x300/222")
+          span Blog
