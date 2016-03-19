@@ -20,15 +20,20 @@ html
         nav#mainNav.main-nav
           ul.main-nav__list
             li.main-nav__item
-              a.main-nav__link(href='/projects') Projects
+              a.main-nav__link(href='/projects')
+                span Projects
             li.main-nav__item
-              a.main-nav__link(href='/resume') Resume
+              a.main-nav__link(href='/resume')
+                span Resume
             li.main-nav__item
-              a.main-nav__link(href='/blog') Blog
+              a.main-nav__link(href='/blog')
+                span Blog
             li.main-nav__item
-              a.main-nav__link(href='/about') About
+              a.main-nav__link(href='/about')
+                span About
             li.main-nav__item
-              a.main-nav__link(href='/contact') Contact
+              a.main-nav__link(href='/contact')
+                span Contact
       div.main-content
         - if (containerClass)
           div(class="content-wrapper content-wrapper--#{containerClass}")
