@@ -8,6 +8,7 @@ html
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/caiters.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
     script(src='http://use.typekit.net/vgo2cvm.js')
     script(type='text/javascript').
       try{Typekit.load();}catch(e){}
@@ -41,3 +42,27 @@ html
         - else
           div(class="content-wrapper")
             block content
+        footer.main-footer
+          div.inner-wrap.text--centered
+            h2.heading.heading--secondary Get In Touch
+            ul.social-list
+              li
+                a.fa.fa-github-alt(href="https://github.com/caiters", target="_blank")
+                  span.text--hidden GitHub
+              li
+                a.fa.fa-linkedin(href="https://www.linkedin.com/in/caitlinbailey", target="_blank")
+                  span.text--hidden LinkedIn
+              li
+                a.fa.fa-twitter(href="https://www.twitter.com/caitorait", target="_blank")
+                  span.text--hidden Twitter
+              li
+                a.fa.fa-instagram(href="https://www.instagram.com/shaeldre/", target="_blank")
+                  span.text--hidden Instagram
+              li
+                a.fa.fa-facebook(href="https://www.facebook.com/caitlin.bailey.giroir", target="_blank")
+                  span.text--hidden Facebook
+              li
+                a.fa.fa-envelope(href="/contact")
+                  span.text--hidden Email
+    script(src="https://code.jquery.com/jquery-2.2.2.min.js", integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=", crossorigin="anonymous")
+    script(src="/javascripts/caiters.js")
