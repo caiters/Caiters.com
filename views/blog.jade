@@ -4,12 +4,12 @@ block content
   header.page-header
     h1.heading--main.heading Blog
   div.inner-wrap
-    ul
+    ul.blog-posts-list
       each post in posts
-        li
+        li.blog-posts-list__item.blog-post
           a(href='/blog/#{post.filename}')
             article.blog-article
-              h1=post.title
+              h1.heading.heading--secondary.no-b-margin=post.title
               date(datetime='#{post.date}') #{moment(post.date).format("MMM D, YYYY")}
               p=post.excerpt
-              span.btn Read More
+              span.btn.btn--solid Read More
