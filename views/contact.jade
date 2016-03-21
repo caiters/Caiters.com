@@ -3,23 +3,16 @@ extends layout
 block content
   header.page-header
     h1.heading--main.heading Contact
-  p Contact page content goes here
-  form.form
-    div.form-group
-      label(for='name' class='form-label') Name
-      input(type='text' id='name' name='name' placeholder='Name').form-input
-    div.form-group
-      label(for='email' class='form-label') Email
-      input(type='email' id='email' name='email' placeholder='Email Address').form-input
-    div.form-group
-      label(for='message' class='form-label') Your message
-      textarea(id='message' name='message' placeholder='Your message here').form-textarea
-    input(type='submit' class='btn')
-    
-  section.social
-    h2 Social
-    ul
-      li
-        a(href='https://www.facebook.com/caitlin.bailey.giroir' target='_blank') Facebook
-      li
-        a(href='https://www.twitter.com/caitorait' target='_blank') Twitter
+  div.inner-wrap
+    p Contact page content goes here
+    form.form
+      div.form-group
+        label(for='name' class='form-label') Name
+        input(type='text' id='name' name='name' placeholder='Name').form-input
+      div.form-group
+        label(for='email' class='form-label') Email
+        input(type='email' id='email' name='email' placeholder='Email Address').form-input
+      div.form-group
+        label(for='message' class='form-label') Your message
+        textarea(id='message' name='message' placeholder='Your message here').form-textarea
+      input(type='submit' class='btn')

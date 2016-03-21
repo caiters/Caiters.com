@@ -3,53 +3,52 @@ extends layout-project
 block variables
   - var containerClass = "xtract";
 
-block project-header
-  h1 Pfister Xtract
 block project-about
-  p.lead-text.
-    Product storytelling using HTML5 audio and animation.
-  p.
-    This was a really fun project! I got to experiment with fun interactions to add life to the pages (such as the little jobbies peeking from the bottom of the panel when
-    you hover over the play button on the main page) and also had the opportunity to experiment with transitions and animation.
-  p I have 
-    a(href='/blog/pfister-xtract') a whole blog post 
-    | about this site, so I won't go into too much more detail here. Overall though, I had a great time working on it and learned a lot - I tried to do better with performance 
-    than I have in the past, got to add some nice transitions based on user interaction, and also got to try out GSAP for the first time.
-  p
-    small.
-      A quick disclaimer: I fully developed the content on About Xtract, Water Pfacts, Installation, and most of Features (less the Innovations panel). Parts of the other pages 
-      were pulled from an existing landing page, so not all of the front end dev on those is my own.
-block project-highlights
-  h2 Lessons Learned
-  ul.project__highlights
-    li.project__highlight Animating along a path (at least the one that was in my head) was not super easy with just CSS. GSAP ended up being a much simpler choice. I'm 100% willing to believe that
-       | I was going about it in the wrong way with CSS so I'll definitely think about it more in the future. But the animation I was coming up with was choppy and unpleasant. 
-       | GSAP allowed me to do exactly what I wanted to do in a fraction of the time I'd already spent trying out different CSS solutions.
-    li.project__highlight With a little bit of planning ahead, it was not challenging to create an IE8-compatible microsite that didn't appear to be missing content without the HTML5 audio.
-       | We wanted to have all the content accessible even without the audio, so while some of the fun interaction was missing, all of the meat of the page was still available
-       | without the audio.
-    li.project__highlight I learned to be careful what transitions are placed where. I had a transform transition on the same element that was being animated with GSAP (with a transform) and didn't
-       | realize it at first. I only wanted to animate the transition when the jobbie went out of the glass, which is why the transition was there in the first place. In fact, I 
-       | didn't realize anything was wrong at all until I realized that some browsers were animating the jobbies differently than Chrome, and Firefox was straight-up crashing after 
-       | about 30 seconds. The fix ended up just being to put the jobbie inside a container, and the container had the transition which handled the translateY transform.
-    li.project__highlight Just because a browser is a modern one does not mean it's going to be just like the others. Test early and test often. Don't get bit by a random bug that only shows up in 
-       | Firefox again!
-block project-stats
-  ul.project-info
-    li.project-info__block
-      strong.project-info__name CMS: 
-      | Sitefinity
-    li.project-info__block
-      strong.project-info__name Browser Support: 
-      | IE8+
-    li.project-info__block
-      strong.project-info__name Type: 
-      | Responsive microsite
-  //
-    Pfister Xtract
-    Stuff I want to say about the project:
-    - experimenting with interaction (jobbies peeking up from the edge when you hover over play button, jobbies replacing dull icons in What Gets Filtered)
-    - experimenting with animation (jobbie floating in glass and floating to top when you listen to audio)
-    - html5 audio (wish I had implemented a loading indicator)
-    - I experimented with CSS animation at first, but ultimately we decided to use GIFs and GSAP for wider support
-    - CMS: Sitefinity
+  header.recent-project--xtract.page-header
+    h1.heading.heading--main.no-b-margin Pfister Xtract
+  div.inner-wrap.text--body
+    p.text--lead.
+      Product storytelling using HTML5 audio and animation.
+    p.
+      This was a really fun project! I got to experiment with fun interactions to add life to the pages (such as the little jobbies peeking from the bottom of the panel when
+      you hover over the play button on the main page) and also had the opportunity to experiment with transitions and animation.
+    p I have 
+      a(href='/blog/pfister-xtract') a whole blog post 
+      | about this site, so I won't go into too much more detail here. Overall though, I had a great time working on it and learned a lot - I tried to do better with performance 
+      than I have in the past, got to add some nice transitions based on user interaction, and also got to try out GSAP for the first time.
+    p
+      small.
+        A quick disclaimer: I fully developed the content on About Xtract, Water Pfacts, Installation, and most of Features (less the Innovations panel). Parts of the other pages 
+        were pulled from an existing landing page, so not all of the front end dev on those is my own.
+    h2.heading--secondary.heading Lessons Learned
+    ul.project__highlights
+      li.project__highlight Animating along a path (at least the one that was in my head) was not super easy with just CSS. GSAP ended up being a much simpler choice. I'm 100% willing to believe that
+         | I was going about it in the wrong way with CSS so I'll definitely think about it more in the future. But the animation I was coming up with was choppy and unpleasant. 
+         | GSAP allowed me to do exactly what I wanted to do in a fraction of the time I'd already spent trying out different CSS solutions.
+      li.project__highlight With a little bit of planning ahead, it was not challenging to create an IE8-compatible microsite that didn't appear to be missing content without the HTML5 audio.
+         | We wanted to have all the content accessible even without the audio, so while some of the fun interaction was missing, all of the meat of the page was still available
+         | without the audio.
+      li.project__highlight I learned to be careful what transitions are placed where. I had a transform transition on the same element that was being animated with GSAP (with a transform) and didn't
+         | realize it at first. I only wanted to animate the transition when the jobbie went out of the glass, which is why the transition was there in the first place. In fact, I 
+         | didn't realize anything was wrong at all until I realized that some browsers were animating the jobbies differently than Chrome, and Firefox was straight-up crashing after 
+         | about 30 seconds. The fix ended up just being to put the jobbie inside a container, and the container had the transition which handled the translateY transform.
+      li.project__highlight Just because a browser is a modern one does not mean it's going to be just like the others. Test early and test often. Don't get bit by a random bug that only shows up in 
+         | Firefox again!
+    ul.project-info
+      li.project-info__block
+        strong.project-info__name CMS: 
+        | Sitefinity
+      li.project-info__block
+        strong.project-info__name Browser Support: 
+        | IE8+
+      li.project-info__block
+        strong.project-info__name Type: 
+        | Responsive microsite
+    //
+      Pfister Xtract
+      Stuff I want to say about the project:
+      - experimenting with interaction (jobbies peeking up from the edge when you hover over play button, jobbies replacing dull icons in What Gets Filtered)
+      - experimenting with animation (jobbie floating in glass and floating to top when you listen to audio)
+      - html5 audio (wish I had implemented a loading indicator)
+      - I experimented with CSS animation at first, but ultimately we decided to use GIFs and GSAP for wider support
+      - CMS: Sitefinity
