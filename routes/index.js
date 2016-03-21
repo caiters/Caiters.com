@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var posts = require('./posts')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -33,14 +34,13 @@ router.get('/contact', function(req, res, next) {
 
 // blog
 router.get('/blog', function(req, res, next) {
-  res.render('blog');
+  res.render('blog', { posts: posts.all()} );
 });
 
 // blog articles
 router.get('/blog/:name', function(req, res, next){
-  res.render('blog/' + req.params.name)
+  res.render('blog/post', posts.get(req.params.name));
 });
-
 
 
 module.exports = router;
