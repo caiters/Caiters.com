@@ -167,6 +167,12 @@ img { max-width: 100%; }
   }
 }
 
+.latest-blog {
+  @media (min-width: 768px) {
+    width: 50%; float: left; 
+  }
+}
+
 // blog post
 .blog-post {
   time { text-transform: uppercase; font-family: 'brandon-grotesque', sans-serif; }
@@ -175,9 +181,11 @@ img { max-width: 100%; }
 }
 
 // page header
-.page-header { background: transparent url('../images/banner-generic.jpg') center center no-repeat; background-size: cover; text-align: center; padding: 1em; min-height: 300px; display: flex; color: #fff; align-items: center;
+.page-header { background: transparent url('../images/banner-generic.jpg') center center no-repeat; background-size: cover; text-align: center; padding: 1em; min-height: 300px; display: flex; flex-direction: column; color: #fff; align-items: center; justify-content: center;
   .heading--main { width: 100%; }
 }
+
+.blog-date { font-family: 'brandon-grotesque', sans-serif; text-transform: uppercase; font-weight: @thin; margin-bottom: 0.5em; }
 
 // recent project
 .recent-project { background: transparent none center center no-repeat; background-size: cover; text-align: center; padding: 1em; min-height: 300px; display: flex;

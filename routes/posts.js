@@ -4,6 +4,7 @@ var fs = require('fs'); //filesystem
 var path = require('path');
 var _ = require('lodash');
 
+
 var parse = function(name){
   var file = fs.readFileSync('./posts/' + name + '.md', 'utf-8');
   var meta = yaml.loadFront(file);

@@ -10,6 +10,6 @@ block content
           a(href='/blog/#{post.filename}')
             article.blog-article
               h1=post.title
-              date(datetime='2015-10-10') Oct 10 2015
+              date(datetime='#{post.date}') #{moment(post.date).format("MMM D, YYYY")}
               p=post.excerpt
               span.btn Read More

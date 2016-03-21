@@ -2,6 +2,7 @@ extends layout-blog
 
 block post
   header.page-header
+    date.blog-date(datetime="#{date}") #{moment(date).format("MMM D, YYYY")}
     h1.heading.heading--main.no-b-margin=title
-  div.inner-wrap
+  div.inner-wrap.text--body
     != html

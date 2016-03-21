@@ -17,7 +17,11 @@ block content
 
     section.latest-blog
       h1.heading.heading--kicker Latest Blog Post
-      include includes/latest-post.jade
+      article.blog-post
+        h1.heading.heading--secondary.no-margins=posts[0].title
+        time(datetime="#{posts[0].date}").blog-post__date #{moment(posts[0].date).format("MMM D, YYYY")}
+        p=posts[0].excerpt
+        a.btn.btn--solid.margin-top-1(href="/blog/#{posts[0].filename}") Read More
   
   div.inner-wrap.section-margins
     div.trio.trio--img.group
