@@ -4,15 +4,17 @@ block content
   header.page-header
     h1.heading--main.heading Contact
   div.inner-wrap.text--body
-    p Contact page content goes here
+    h2.heading.heading--secondary Want to get in touch?
+    p You can send me a message using the contact form below!
+    p I'm available for freelance web design and development. Please, no recruiters!
     form.form
       div.form-group
         label(for='name' class='form-label') Name
-        input(type='text' id='name' name='name' placeholder='Name').form-input
+        input(type='text' id='name' name='name' placeholder='e.g. Sarah Kerrigan').form-input
       div.form-group
         label(for='email' class='form-label') Email
-        input(type='email' id='email' name='email' placeholder='Email Address').form-input
+        input(type='email' id='email' name='email' placeholder='e.g. me@example.com').form-input
       div.form-group
         label(for='message' class='form-label') Your message
-        textarea(id='message' name='message' placeholder='Your message here').form-textarea
-      input(type='submit' class='btn')
+        textarea(id='message' name='message').form-textarea
+      input(type='submit' class='btn btn--solid')

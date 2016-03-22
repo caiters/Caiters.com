@@ -67,7 +67,7 @@ img { max-width: 100%; }
 
 // buttons
 .btn { text-transform: uppercase; font-family: 'brandon-grotesque', sans-serif; padding: 0.5em 1.5em; text-decoration: none;
-  &--solid { background: #332379; color: #fff; .transition(background-color 0.25s);
+  &--solid { background: #332379; color: #fff; .transition(background-color 0.25s); border: none;
     &:hover { background-color: #000; }
   }
   &--outline { border: 1px solid #000;
@@ -254,4 +254,11 @@ img { max-width: 100%; }
   li { display: inline-block; margin-right: 1em;
     &:last-child { margin: 0; }
   }
+}
+
+// contact form
+
+.form {
+  &-group { clear: both; margin-bottom: 1em; }
+  &-label { display: block; }
 }
