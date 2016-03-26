@@ -3,7 +3,6 @@
   var scrollTop;
   $(document).scroll(function(e){
     scrollTop = $(window).scrollTop();
-    console.log(scrollTop);
     if ( scrollTop > 0) {
       $('body').addClass('is-scrolled');
     } else {
