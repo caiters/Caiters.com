@@ -1,21 +1,34 @@
 extends ../layout
 
 block content
-  h1 Uncovered Classics
-  p.lead-text.
-    A wordpress site that seeks to promote overlooked female authors of the 20th century.
-  ul.project-info
-    li.project-info__block
-      strong.project-info__name CMS: 
-      | WordPress
-    li.project-info__block
-      strong.project-info__name Browser Support: 
-      | IE9+
-    li.project-info__block
-      strong.project-info__name Type: 
-      | Responsive website
-  p.
-    TBD
-  h2 Lessons Learned
-  ul
-    li TBD
+  header.page-header.recent-project--uc
+    h1.heading--main.heading.no-b-margin Uncovered Classics
+  div.inner-wrap.text--body
+    p.text--lead.text--centered A wordpress site that seeks to promote overlooked female authors of the 20th century.
+    a(href="http://www.uncoveredclassics.com/", target="_blank")
+      img.img--centered.margin-bottom-3.img--bordered(src="/images/website-uc.jpg", alt="Uncovered Classics website screenshot")
+    p.text--centered
+      a.btn.btn--solid(href="http://www.uncoveredclassics.com/", target="_blank") View Website
+      
+    div.project-body
+      ul.project-info
+        li.project-info__block
+          strong.project-info__name CMS: 
+          | WordPress
+        li.project-info__block
+          strong.project-info__name Browser Support: 
+          | IE9+
+        li.project-info__block
+          strong.project-info__name Type: 
+          | Responsive website
+      h2.heading.heading--secondary About This Project
+      p.
+        Uncovered Classics uses a heavily modified WordPress theme called Zuki. Amy and I worked together as a designer and developer to mould the existing theme
+        into a state she was happy with for her blog.
+      p.
+        This was the first time I worked on a blog website that needed to support different authors as well as the ability to show illustrators, and that would 
+        actually be using different categories in WordPress to actual effect, so it was really interesting to actually use WordPress for what it was intended, rather 
+        than as a CMS for a more standard content-driven site.
+      p.
+        If you're interested in learning more about why Amy started Uncovered Classics, please read 
+        #[a(href="http://www.uncoveredclassics.com/2015/03/24/why-i-decided-to-start-uncovered-classics/", target="_blank") Why I Decided to Start Uncovered Classics].

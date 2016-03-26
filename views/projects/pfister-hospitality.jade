@@ -1,23 +1,49 @@
 extends ../layout
 
 block content
-  header.page-header.recent-project--xtract
-    h1.heading.heading--main.no-b-margin Pfister Hospitality
+  header.page-header.recent-project--pfhy
+    h1.heading--main.heading.no-b-margin Pfister Hospitality
   div.inner-wrap.text--body
-    p.text--lead.
-      This was a new site, part of the Pfister family, to show off the Pfister Faucets hospitality capabilities.
-    ul.project-info
-      li.project-info__block
-        strong.project-info__name CMS: 
-        | Sitefinity
-      li.project-info__block
-        strong.project-info__name Browser Support: 
-        | IE8+
-      li.project-info__block
-        strong.project-info__name Type: 
-        | Responsive website
-    p.
-      TBD
-    h2 Lessons Learned
-    ul
-      li This was my first shot at front end form validation to help with user experience
+    p.text--lead.text--centered A new site in the Pfister family designed to show off their hospitality faucet solutions.
+    a(href="http://hospitality.pfisterfaucets.com", target="_blank")
+      img.img--centered.margin-bottom-3.img--bordered(src="/images/website-pfhy.jpg", alt="Pfister Hospitality website screenshot")
+    p.text--centered
+      a.btn.btn--solid(href="http://hospitality.pfisterfaucets.com", target="_blank") View Website
+      
+    div.project-body
+      ul.project-info
+        li.project-info__block
+          strong.project-info__name CMS: 
+          | Sitefinity
+        li.project-info__block
+          strong.project-info__name Browser Support: 
+          | IE8+
+        li.project-info__block
+          strong.project-info__name Type: 
+          | Responsive website
+      h2.heading.heading--secondary About This Project
+      p.
+        This was the first large Spectrum Brands project I worked on completely by myself. While I also had a hand in PfisterFaucets.com and BaldwinHardware.com, neither were as the 
+        sole developer. For Pfister Hospitality, I had the opportunity to start from a completely clean slate (though we intended to reuse some components from the recent Baldwin redesign)
+        and was able to experiment with some nice interactions such as the various hover effects on the homepage.
+      p.
+        This was also the first time I had to build static reuseable controls for Sitefinity. A number of controls (other content management systems may call them widgets) were used on this 
+        site, from content controls (e.g. the text/image carousel on the project showcase pages) to layout controls (the image/text grid with red text boxes and image boxes alternating).
+        I fully developed the layout controls, and developed static versions of the content controls for one of the back end developers working with Pfister to hook up to either their product 
+        data or to the CMS.
+
+      h2.heading.heading--secondary Lessons Learned
+      ul
+        li.
+          This was my first shot at front end form validation to help with user experience. The lead designer and I spent time figuring out what the form would look like and exactly what 
+          it would do depending on whether the form submitted or not, whether there was an error I could catch on the front end or not, and whether there was an error on the back end. So 
+          I ended up having a lot of fun developing such a tiny little form (on the homepage).
+        li.
+          I worked on this website at about the same time as the Web Advanced website, and also learned a lot about Flexbox on this one. Seriously, that thing is a lifesaver. So much 
+          vertical centering that I no longer have to care about. It just works! This project did have to support IE8+ and lower versions of IE do not support Flexbox. However, some simple 
+          fallbacks have allowed it to look close to the intended vision without taking the time that would normally be spent doing so.
+        li.
+          It was during this project that I also discovered a carousel plugin that has made my life significantly easier. Whether or not they work, people love their carousels, and I have
+          to build them for a ton of sites. I came across #[a(href="http://kenwheeler.github.io/slick/", target="_blank") Slick JS] and ended up using it for this project and many, many 
+          more since then. It makes building a responsive carousel ridiculously easy, and it's great to no longer have to spend any brain power on it at all.
+        

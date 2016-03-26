@@ -1,21 +1,42 @@
 extends ../layout
 
 block content
-  h1 Canari
-  p.lead-text.
-    A product catalog
-  ul.project-info
-    li.project-info__block
-      strong.project-info__name CMS: 
-      | Orchard CMS
-    li.project-info__block
-      strong.project-info__name Browser Support: 
-      | IE8+
-    li.project-info__block
-      strong.project-info__name Type: 
-      | Responsive website
-  p.
-    TBD
-  h2 Lessons Learned
-  ul
-    li This was my first bootstrap site ever! It shows, but it was a really good learning experience for me since I had never used a css framework before.
+  header.page-header.recent-project--canari
+    h1.heading--main.heading.no-b-margin Canari &amp; Shebeest
+  div.inner-wrap.text--body
+    p.text--lead.text--centered This was a two-website project to update canari.com and shebeest.com.
+    a(href="http://www.canari.com/", target="_blank")
+      img.img--centered.margin-bottom-3.img--bordered(src="/images/website-canari.jpg", alt="Canari website screenshot")
+    p.text--centered
+      a.btn.btn--solid(href="http://www.canari.com/", target="_blank") View Website
+      
+    div.project-body
+      ul.project-info
+        li.project-info__block
+          strong.project-info__name CMS: 
+          | Orchard CMS
+        li.project-info__block
+          strong.project-info__name Browser Support: 
+          | IE9+, modern browsers
+        li.project-info__block
+          strong.project-info__name Type: 
+          | Responsive product catalog
+      h2.heading.heading--secondary About This Project
+      p.
+        This project was an interesting set of firsts for me.
+      p.
+        I had never before needed to build two websites from scratch using the same base layout and then actually theming them differently, so I knew I would have to 
+        try to keep an eye out for that. I wanted to make sure it wouldn't be a huge hassle to build out one site and then add in the theme for each. The two sites would 
+        look similar, but shebeest uses a lot of pinks and Canari is black and blue.
+      p.
+        This was also my first time using a CSS framework. I'd never used one before and honestly before this project questioned whether they were at all useful, and had no 
+        idea why anyone would want to use them.
+      p.
+        Ultimately, both experiments went well. I ended up building shebeest.com first, and the process of getting canari.com set up and themed properly only took a handful of
+        hours.
+      p. 
+        The fact that it is my first bootstrap site definitely shows, but it was a great learning experience and definitely helped 
+        me set myself up for success in future projects using Bootstrap. I think that overall with heavily designed sites, sometimes Bootstrap adds a lot of work (because 
+        then I have to go and override their button styles and all sorts of other styles to get something to look the way I want), but it's nice to have the work taken out 
+        of the grid and form elements for sure. Eventually I may transition to using a stripped down version of Bootstrap to supply a grid, form elements, and other things I 
+        use frequently, and leave the rest out since all it does is bloat my CSS.
