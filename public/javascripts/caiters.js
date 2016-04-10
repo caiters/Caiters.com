@@ -10,6 +10,10 @@
     }
   });
 
+  $('.open-mobile-nav').click(function(){
+    $('.main-nav').toggleClass('main-nav__open');
+  });
+
   // contact form
   if( $('#contactForm').length>0){
 
