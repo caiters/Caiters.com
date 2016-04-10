@@ -23,7 +23,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+if( process.env.NODE_ENV !== 'production'){
+  app.use(express.static(path.join(__dirname, 'public')));
+}
 
 var gmailpw = process.env.CAITERS_GMAIL_PASS;
 var transporter = nodemailer.createTransport('smtps://ayashi%40valefor.com:'+ gmailpw +'@smtp.gmail.com');

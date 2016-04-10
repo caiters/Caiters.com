@@ -173,7 +173,7 @@ img { max-width: 100%; }
     &:hover { background-color: #332379; }
     .is-scrolled & { transform: translateX(-260px);
       &__cb, &__fe { opacity: 0; }
-      &:before { transform: translate3d(265px, -60%, 0) rotate(-90deg); }
+      &:before { transform: translate3d(265px, -32%, 0) rotate(-90deg); }
     }
   }
 }
@@ -279,10 +279,10 @@ img { max-width: 100%; }
 }
 
 // page header
-.page-header { background: transparent url('../images/banner-generic.jpg') center center no-repeat; background-size: cover; text-align: center; padding: 1em; min-height: 150px; display: flex; flex-direction: column; color: #fff; align-items: center; justify-content: center;
+.page-header { background: transparent url('../images/banner-generic.jpg') center center no-repeat; background-size: cover; text-align: center; padding: 1em; height: 150px; min-height: 150px; display: flex; flex-direction: column; color: #fff; align-items: center; justify-content: center;
   .heading--main { width: 100%; margin-bottom: 0; }
   @media (min-width: 768px) {
-    min-height: 300px;
+    min-height: 300px; height: 300px;
   }
 }
 
@@ -291,7 +291,7 @@ img { max-width: 100%; }
 .blog-post-body { margin-top: 3em; line-height: 1.6em; }
 
 // recent project
-.recent-project { background: transparent none center center no-repeat; background-size: cover; text-align: center; padding: 1em; min-height: 300px; display: flex;
+.recent-project { background: transparent none center center no-repeat; background-size: cover; text-align: center; padding: 1em; height: 300px; min-height: 300px; display: flex;
   &--wa { background-image: url('../images/banner-wa.jpg') }
   &--pfhy { background-image: url('../images/banner-pfhy.jpg'); }
   &--xtract { background-image: url('../images/banner-xtract.jpg'); }
