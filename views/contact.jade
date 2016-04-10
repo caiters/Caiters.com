@@ -7,14 +7,20 @@ block content
     h2.heading.heading--secondary Want to get in touch?
     p You can send me a message using the contact form below!
     p I'm available for freelance web design and development. Please, no recruiters!
-    form.form
-      div.form-group
-        label(for='name' class='form-label') Name
-        input(type='text' id='name' name='name' placeholder='e.g. Sarah Kerrigan').form-input
-      div.form-group
-        label(for='email' class='form-label') Email
-        input(type='email' id='email' name='email' placeholder='e.g. me@example.com').form-input
-      div.form-group
-        label(for='message' class='form-label') Your message
-        textarea(id='message' name='message').form-textarea
-      input(type='submit' class='btn btn--solid')
+    p.message= msg
+    form.form(action="/contact" name="contactForm" id="contactForm" method="post" novalidate)
+      fieldset
+        legend Contact Me
+        div.form-group
+          label(for='name' class='form-label') Name
+          input(type='text' id='name' name='name' required placeholder='e.g. Sarah Kerrigan').form-input
+          p.form-error-msg.form-error-msg--hidden
+        div.form-group
+          label(for='email' class='form-label') Email
+          input(type='email' id='email' name='email' required placeholder='e.g. me@example.com').form-input
+          p.form-error-msg.form-error-msg--hidden
+        div.form-group
+          label(for='message' class='form-label') Your message
+          textarea(id='message' required name='message').form-textarea
+          p.form-error-msg.form-error-msg--hidden
+        input(type='submit' id='sendmsg' class='btn btn--solid')
