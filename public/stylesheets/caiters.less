@@ -194,9 +194,11 @@ img { max-width: 100%; }
 // main navigation
 .main-nav { max-height: 0; transition: max-height 0.25s; position: absolute; top: 100%; left: 0; right: 0; z-index: 10; background: #fff; overflow: hidden;
   a { text-decoration: none; color: #222; }
-  &__list { list-style: none outside; margin: 0; padding: 0; }
-  &__open { max-height: 150px; }
+  &__list { list-style: none outside; margin: 0; padding: 0 0 1em; }
+  &__open { max-height: 200px; }
+  &__item { margin-bottom: 0.5em; margin-top: 0.5em; }
   @media (min-width: @br-tablet) {
+    &__item { margin-top: 0; margin-bottom: 0; }
     opacity: 1; max-height: none; position: static;
     text-align: center; margin-top: 10.05em;
     a { position: relative; display: block; width: 100%; padding-top: 1em; padding-bottom: 1em;
