@@ -10,43 +10,40 @@
     }
   });
 
-  /*
-  Contact form to do-
-  - prevent clicking when btn--submitting class is on the button
-  - show visual for submitting button so user isn't confused why nothing is happening (ajax loader)
-  - display "message sent" or "message not sent" messages if the form succeeds/fails
-  */
-
   // contact form
   if( $('#contactForm').length>0){
 
     // submit form
     $('#contactForm').submit(function(e){
       e.preventDefault();
-      if(validateForm()){
-        // it's good!
-        $('#sendmsg').addClass('btn--submitting');
-        var formData = {
-          'name': $('input[name=name]').val(),
-          'email': $('input[name=email]').val(),
-          'message': $('textarea[name=message]').val(),
-        };
-
-        $.ajax({
-          type: 'POST',
-          url: '/contact',
-          data: formData,
-          dataType: 'json',
-          encode: true
-        }).done(function(data){
-          $('#sendmsg').removeClass('btn--submitting');
-          console.log(data);
-        });
-
-
+      if( $('#sendmsg').hasClass('btn--submitting') ){
+        // do nothing...
       } else {
-        // it didn't validate
-        console.error('error');
+        if(validateForm()){
+          // it's good!
+          $('#sendmsg').addClass('btn--submitting');
+          var formData = {
+            'name': $('input[name=name]').val(),
+            'email': $('input[name=email]').val(),
+            'message': $('textarea[name=message]').val(),
+          };
+
+          $.ajax({
+            type: 'POST',
+            url: '/contact',
+            data: formData,
+            dataType: 'json',
+            encode: true
+          }).done(function(data){
+            $('#sendmsg').removeClass('btn--submitting');
+            $('#formMsgSubmit').text(data.msg).removeClass('form-msg--hidden');
+            if(data.err){
+              $('#formMsgSubmit').addClass('form-msg--error');
+            } else {
+              $('#formMsgSubmit').removeClass('form-msg--error').addClass('form-msg--success');
+            }
+          });
+        }
       }
     });
 
@@ -55,28 +52,28 @@
       var error = false;
       if(!($('#name').val().length > 0)) {
         // if name length is 0, error
-        $('#name').addClass('form-error');
-        $('#name').next('.form-error-msg').text('Please enter your name').removeClass('form-error-msg--hidden');
+        $('#name').addClass('form-input--error');
+        $('#name').next('.form-msg--error').text('Please enter your name').removeClass('form-msg--hidden');
         error = true;
       }
       if ( $('#email').val().length > 0){
-        var re = /\S+@\S+/;
+
         // check if email is a valid email address string@string
-        if (!re.test($('#email').val())){
-          $('#email').addClass('form-error');
-          $('#email').next('.form-error-msg').text('Please enter a valid email address').removeClass('form-error-msg--hidden');
+        if (!testEmail($('#email').val())){
+          $('#email').addClass('form-input--error');
+          $('#email').next('.form-msg--error').text('Please enter a valid email address').removeClass('form-msg--hidden');
           error = true;
         }
       } else {
         // if email length is 0, error
-        $('#email').addClass('form-error');
-        $('#email').next('.form-error-msg').text('Please enter an email address').removeClass('form-error-msg--hidden');
+        $('#email').addClass('form-input--error');
+        $('#email').next('.form-msg--error').text('Please enter an email address').removeClass('form-msg--hidden');
         error = true;
       }
       if( $('#message').val().length === 0) {
         // if message length is 0, error
-        $('#message').addClass('form-error');
-        $('#message').next('.form-error-msg').text('Please write a message').removeClass('form-error-msg--hidden');
+        $('#message').addClass('form-textarea--error');
+        $('#message').next('.form-msg--error').text('Please write a message').removeClass('form-msg--hidden');
         error = true;
       }
       // if we have any errors, not valid.
@@ -87,11 +84,22 @@
 
     $('form input, form textarea').keyup(function(){
       var $this = $(this);
-      if( $this.hasClass('form-error')){
-        $this.removeClass('form-error');
-        var errorMsg = $this.next('.form-error-msg')[0];
-        console.log(errorMsg);
-        $(errorMsg).addClass('form-error-msg--hidden');
+      if( $this.hasClass('form-input') || $this.hasClass('form-textarea')){
+        $this.removeClass('form-input--error form-textarea--error');
+        var errorMsg = $this.next('.form-msg--error')[0];
+        $(errorMsg).addClass('form-msg--hidden');
+      }
+    });
+
+    var testEmail = function(email){
+      var re = /\S+@\S+/;
+      return re.test(email);
+    }
+
+    $('#email').blur(function(e){
+      if( $('#email').val().length>0 && !testEmail($('#email').val())){
+        $('#email').addClass('form-input--error');
+        $('#email').next('.form-msg--error').text('Please enter a valid email address').removeClass('form-msg--hidden');
       }
     });
   };
