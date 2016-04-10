@@ -32,8 +32,9 @@ app.post('/contact', function(req,res){
   mailOpts = {
     from: req.body.name + ' &lt;' + req.body.email + '&gt;', // grab form data from the request body object
     to: 'ayashi+caiters@valefor.com',
+    replyTo: req.body.email,
     subject: 'Caiters.com contact form',
-    text: req.body.message
+    html: '<b>from</b>:' + req.body.name + ' &lt;' + req.body.email + '&gt;<br/><b>message</b>: ' + req.body.message
   };
 
   transporter.sendMail(mailOpts, function(error, response){
