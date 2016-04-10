@@ -10,14 +10,14 @@ block content
     p.message= msg
     form.form(action="/contact" name="contactForm" id="contactForm" method="post" novalidate)
       fieldset
-        legend Contact Me
+        legend.sr-only Contact Me
         div.form-group
           label(for='name' class='form-label') Name
           input(type='text' id='name' name='name' required placeholder='e.g. Sarah Kerrigan').form-input
           p.form-msg.form-msg--error.form-msg--hidden
         div.form-group
           label(for='email' class='form-label') Email
-          input(type='email' id='email' name='email' required placeholder='e.g. me@example.com').form-input
+          input(type='email' id='email' name='email' required placeholder='e.g. sarah.kerrigan@sonsofkorhal.com').form-input
           p.form-msg.form-msg--error.form-msg--hidden
         div.form-group
           label(for='message' class='form-label') Your message

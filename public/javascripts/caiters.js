@@ -82,6 +82,7 @@
       } else { return true; }
     };
 
+    // clear error messages when you start typing in a form field that has an error class on it. we assume you're fixing it.
     $('form input, form textarea').keyup(function(){
       var $this = $(this);
       if( $this.hasClass('form-input') || $this.hasClass('form-textarea')){
@@ -96,6 +97,7 @@
       return re.test(email);
     }
 
+    // if something has been typed, let's check if it's a valid email address
     $('#email').blur(function(e){
       if( $('#email').val().length>0 && !testEmail($('#email').val())){
         $('#email').addClass('form-input--error');
