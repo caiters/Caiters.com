@@ -320,16 +320,33 @@ img { max-width: 100%; }
 .form {
   fieldset { border: none; padding: 0; margin: 0; }
   &-group { clear: both; margin-bottom: 1em; }
-  &-label { display: block; }
-  &-input, &-textarea { border: 1px solid #ddd; display: block; width: 100%; }
+  &-label { display: block; margin-bottom: 0.25em; }
+  &-input, &-textarea { border: 1px solid #ddd; display: block; width: 100%; box-sizing: border-box; padding: 0.5em; transition: border-color 0.25s, background-color 0.25s; background-color: #f6f6f6;
+    &:focus { outline: none; border-color: #332379; background-color: #fff; }
+  }
   &-input {
     &--error { border-color: red;}
+    @media (min-width: 768px) {
+      width: 50%; display: inline-block;
+    }
   }
-  &-textarea {
+  &-textarea { height: 8em;
     &--error { border-color: red; }
+    @media (min-width: 768px) {
+      width: 75%; display: inline-block;
+    }
   }
   &-msg { margin-top: 0.5em; display: block;
-    &--error { color: red; }
+    &--error { color: red;
+      @media (min-width: 768px) {
+        display: inline-block; margin-bottom: 0; margin-left: 1.5em;
+      }
+    }
+    &--textarea {
+      @media (min-width: 768px) {
+        display: block; margin-left: 0; margin-bottom: 1em;
+      }
+    }
     &--success { color: green; }
     &--hidden { display: none; }
   }
