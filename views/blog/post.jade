@@ -4,5 +4,5 @@ block post
   header.page-header
     date.blog-date(datetime="#{date}") #{moment(date).format("MMM D, YYYY")}
     h1.heading.heading--main.no-b-margin=title
-  div.inner-wrap.text--body
+  div.inner-wrap.text--body.blog-post-body
     != html
