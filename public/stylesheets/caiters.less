@@ -104,7 +104,7 @@ img { max-width: 100%; }
   &--kicker { .kicker; }
   &--main { font-size: 2.5em; margin-top: 0; }
   &--secondary { font-size: 1.5em; }
-  &--tertiary { font-size: 1.1em; font-weight: @thin; }
+  &--tertiary { font-size: 1.3em; font-weight: @thin; }
   @media (min-width: 768px) {
     &--main { font-size: 3em; }
     &--secondary { font-size: 2em; }
@@ -319,10 +319,11 @@ img { max-width: 100%; }
 
 // project list
 .project-list { list-style: none outside; margin: 0; padding: 0;
-  .project { width: 33.3333333%; float: left; max-width: 300px; }
+  .project { max-width: 300px; margin-bottom: @spacing-md; margin-left: auto; margin-right: auto; }
   @media (min-width:768px) {
+
     display: flex; flex-wrap: wrap;justify-content: space-around;
-    .project { margin-bottom: 1.5em; }
+    .project { margin-bottom: 1.5em; width: 33.3333333%; float: left;  }
   }
   &--text {
     a { text-decoration: none; color: #332379;
@@ -331,8 +332,8 @@ img { max-width: 100%; }
   }
 }
 .project { display: block; text-align: center;
-
-  img { display: block; }
+  &__link { text-decoration: none; color: #000; }
+  img { display: block; margin-bottom: @spacing-xs; }
 
   @media (min-width:768px) {
     &__link { display: block; position: relative;
