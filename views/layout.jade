@@ -36,7 +36,7 @@ html
             li.main-nav__item
               a.main-nav__link(href='/contact')
                 span Contact
-      div.main-content
+      div.main-content(role='main')
         - if (containerClass)
           div(class="content-wrapper content-wrapper--#{containerClass}")
             block content
