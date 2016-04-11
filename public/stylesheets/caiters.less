@@ -1,3 +1,5 @@
+@import 'includes/_normalize';
+
 @br-phone: 480px;
 @br-tablet: 768px;
 @br-desktop: 992px;
@@ -10,7 +12,7 @@
 @bold: 700;
 
 // stuff
-.transition(...) {
+.transition(...) { 
   @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
   -webkit-transition: @args;
   -moz-transition: @args;
