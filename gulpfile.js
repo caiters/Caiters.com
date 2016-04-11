@@ -5,6 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('css', function(){
   gulp.src('./public/stylesheets/*.less')
@@ -34,6 +35,14 @@ gulp.task('js', function(){
     .pipe(gulp.dest('./public/javascripts/'))
 });
 
+gulp.task('images', function(){
+  gulp.src('./public/images/src/*')
+  .pipe(imagemin({
+    progressive: true
+  }))
+  .pipe(gulp.dest('./public/images'));
+});
+
 gulp.task('watch:css', ['css'], function(){
   gulp.watch('./public/stylesheets/*.less', ['css', 'concat-css']);
 });
@@ -42,4 +51,4 @@ gulp.task('watch:js', ['js'], function(){
   gulp.watch('./public/javascripts/src/*.js', ['js']);
 });
 
-gulp.task('default', ['watch:css', 'watch:js']);
+gulp.task('default', ['images', 'watch:css', 'watch:js']);
