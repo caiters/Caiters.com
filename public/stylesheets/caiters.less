@@ -12,7 +12,7 @@
 @bold: 700;
 
 // stuff
-.transition(...) { 
+.transition(...) {
   @args: ~`"@{arguments}".replace(/[\[\]]/g, '')`;
   -webkit-transition: @args;
   -moz-transition: @args;
@@ -147,7 +147,7 @@ img { max-width: 100%; }
 
 // inner wrap
 .inner-wrap { max-width: 1000px; margin-left: auto; margin-right: auto; .group; padding-left: 1em; padding-right: 1em;
-
+  > *:first-child { margin-top: 0; } 
   @media (min-width: 768px) {
     &--center-vert { display: flex; align-items: center; }
   }
