@@ -1,0 +1,40 @@
+extends layout-project
+
+block content
+  header.recent-project--placeunicorn.page-header
+    h1.heading.heading--main.no-b-margin PlaceUnicorn
+  div.inner-wrap.text--body.section-padding
+    p.text--lead.text--centered Placeholder image website featuring unicorns.
+    a(href="http://placeunicorn.com", target="_blank")
+      img.img--centered.margin-bottom-3.img--bordered(src="/images/website-placeunicorn.jpg", alt="PlaceUnicorn screenshot")
+    p.text--centered
+      a.btn.btn--solid(href="http://placeunicorn.com/", target="_blank") View Website
+      
+    div.project-body
+      ul.project-info
+        li.project-info__block
+          strong.project-info__name CMS: 
+          | None
+        li.project-info__block
+          strong.project-info__name Browser Support: 
+          | Modern Browsers
+        li.project-info__block
+          strong.project-info__name Type: 
+          | Responsive Website
+      h2.heading.heading--secondary About This Project
+      p.
+        A little while back, I noticed that placekitten.com was no longer as reliable as it once was. Sometimes images would fail to load and I wouldn't be getting 100% kitten goodness.
+      p I joked with some coworkers that we should make a placeholder image site with unicorns instead. One of my coworkers took it more seriously than I intended... and PlaceUnicorn was born!
+      p.
+        The site is a collaborative effort between the three awesome women on our dev team at Web Advanced.
+      ul
+        li.
+          Rebecca built out the backend to actually handle cropping the images
+        li.
+          I designed the site in the browser and probably spent far too much time on the site banner and looking for free-to-use unicorn art
+        li.
+          Katherine designed and cleaned up the image gallery that shows the image IDs that users can choose from.
+      h2.heading--secondary.heading Lessons Learned
+      ul.project__highlights
+        li.project__highlight.
+          This project was an opportunity to do something fun when I ended up low on work for a couple days.
