@@ -8,7 +8,7 @@ Recently at work we started a little thing we're calling the UNICORN (Ultimate N
 
 Last week it was my turn! I did a presentation on the [BEM naming convention for CSS](https://caiters.com/bem/#/).
 
-I started learning about BEM late last year, and recently completely my first large project using BEM. I found it to be a really positive experience, so wanted to share what BEM was with the rest of my team here at Web Advanced.
+I started learning about BEM late last year, and recently completed [my first large project using BEM](/projects/kevo). I found it to be a really positive experience, so wanted to share what BEM was with the rest of my team here at Web Advanced.
 
 Speaking in front of a group of people is scary, and I've been looking to get more experience with public speaking. I'm not sure I'd ever feel comfortable enough to speak at a conference in front of hundreds of people, but I had a lot of fun doing a small presentation for my company.
 
