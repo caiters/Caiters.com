@@ -5,10 +5,10 @@ block content
     h1.heading--main.heading.no-b-margin Color Me Hungry
   div.inner-wrap.text--body.section-padding
     p.text--lead.text--centered Web Advanced development team Hackathon project
-    a(href="http://www.lendingqb.com", target="_blank")
+    a(href="http://www.colormehungry.com", target="_blank")
       img.img--centered.margin-bottom-3.img--bordered(src="/images/website-lendingqb.jpg", alt="LendingQB website screenshot")
     p.text--centered
-      a.btn.btn--solid(href="http://www.lendingqb.com", target="_blank") View Website
+      a.btn.btn--solid(href="http://www.colormehungry.com", target="_blank") View Website
       
     div.project-body
       ul.project-info
@@ -17,33 +17,31 @@ block content
           | None (Static)
         li.project-info__block
           strong.project-info__name Browser Support: 
-          | IE10+, modern browsers
+          | Modern browsers
         li.project-info__block
           strong.project-info__name Type: 
-          | Responsive website
+          | Browser Game
       h2.heading.heading--secondary About This Project
       p.
-        This was a fun project to work on with a lot of interesting CSS challenges. The designer was
-        encouraged to be creative with the design and to help make this site stand out with abstract
-        imagery and a limited color palette.
+        The development team was looking for an opportunity to learn some new things while collaborating
+        on a fun project. Due to the nature of our many projects, while we all have worked with one another
+        in some form, we never all have worked together on a single project. So we decided to change that 
+        with Color Me Hungry.
       p.
-        Angled panels were a big part of the LendingQB design and were one of the first things I tackled
-        with prototyping. I also needed to deal with how the header and footer were not supposed to be 
-        angled at all. I ended up accomplishing this with a mixture of transform: skew (container element
-        with one skew and an inner container with an opposite skew) to cause the angles and using padding,
-        negative margins, and z-index to help the header and footer sit as they were supposed to.
+        With some collaboration with a member of the design team (who made the majority of the lovely food
+        cards and the background for us) we made the game! Color Me Hungry is an Angular app on top of a 
+        node backend. It was for many of us our first from-scratch Angular app, so we made some mistakes 
+        here and there, but overall it was a very fun project to all collaborate on together.
       p.
-        One of the most challenging pieces of the form was the natural language form at the bottom of the 
-        homepage - which will have a blog post coming soon to webadvanced.com to go more in depth!
-      p.
-        I also got to write a mailer using the phpmailer library! There was no back end developer on this
-        project so I decided to give it a shot myself.
-      p.
-        Overall this project was an opportunity to utilize the tools I became accustomed to while working
-        on Kevo on a brand new project, and I think the result is a beautiful and clean presentation.
+        We still have some plans to make some fun updates, so if you like to play, check back every once 
+        in a while!
+      
         
       h2.heading.heading--secondary Lessons Learned
       ul
         li.
-          Building an intuitive natural language form may in some cases involve rebuilding 
-          standard form behavior, which in turn could make the form less intuitive.
+          This project helped me learn more how Angular works (although at the time of working on this,
+          I still had put-everything-in-the-controller-itis).
+        li.
+          We ended up using AWS to host the site and I set up dokku to help with deploys, so that was 
+          a fun learning experience as well.
