@@ -155,7 +155,7 @@ img { max-width: 100%; }
   @media (min-width: @br-tablet) {
     margin-top: 0;
   }
-} 
+}
 
 // site title in header
 .site-title { display: block; text-decoration: none; font-family: 'brandon-grotesque', sans-serif; padding: @spacing-xs; .group; color: #332379;
@@ -177,11 +177,11 @@ img { max-width: 100%; }
   }
   @media (min-width: @br-wide-desktop) {
     width: 100px;
-    &__cb,&__fe { display: none; }
+    &__cb,&__fe { display: block; text-indent: -9999px; }
   }
   @media (min-width: 1550px) {
     width: 350px;
-    &__cb,&__fe { display: block; width: auto; white-space: pre;}
+    &__cb,&__fe { width: auto; white-space: pre; text-indent: 0; }
   }
 }
 
