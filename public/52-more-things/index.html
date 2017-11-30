@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>52 Weeks of Web Experiments</title>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="things.css" />
+	<script src="//use.typekit.net/mju5wyx.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+	<header id="header">
+		<h1>Web Development 2018 <span>Thing a Week</span></h1>
+	</header>
+	<div id="main" class="container">
+		<p>Maybe I'll get this one finished.</p>
+
+		<h2>The List</h2>
+		<p>Completed <span id="completed"></span> out of <span id="fullList"></span> so far.</p>
+		<ol class="things" id="things">
+      <li><strong>Headless CMS</strong> - Experiment with a headless CMS (current choice: prismic.io)</li>
+      <li><strong>Vue.js</strong> - Finish work on the Daughters of the Alliance roster page in Vue (finish filtering and styling)</li>
+      <li><strong>Vue.js and D3.js</strong> - Create some visual representations of classes and/or races in Daughters of the Alliance</li>
+      <li><strong>HTML/CSS</strong> - Start simple fun page for Warcraft Pet Battles. Pick like 6 pets and just include their info.</li>
+      <li><strong>HTML/CSS</strong> - Adding to Warcraft Pet Battles, experiment with creating a bracket (such as a double elimination bracket)</li>
+      <li><strong>CSS</strong> - Use CSS animation to animate some things on the page (like a sprite animation of Perky Pug)</li>
+			<li><strong>API</strong> - Build a simple API for practice (try to think of something practical, but if not anything will do)</li>
+      <li><strong>CSS</strong> - Build a timeline of the history of DotA with cool animations and interactions</li>
+      <li><strong>Vue.js</strong> - List video games and do filtering with <a href="https://www.giantbomb.com/api/">Giant Bomb api</a></li>
+      <li><strong>Vue.js</strong> - Continue on video game app by allowing login (maybe via facebook) and let users create a collection of their own games with different statuses (finished, currently playing, etc)</li>
+      <li><strong>Vue.js</strong> - Continue on video game app by creating a component that will pick a game from the backlog for the user to play</li>
+			<li><strong>CSS Art</strong> - Make a piece of CSS art (inspired by http://a.singlediv.com)</li>
+			<li><strong>Webpack</strong> - Experiment with webpack - get something simple running and working on any project</li>
+			<li><strong>JavaScript</strong> - Create a quiz - What WoW class should you play (with hybrids etc)?</li>
+      <li><strong>HTML/CSS</strong> - Make a single page based on a Heroes of the Storm character</li>
+      <li><strong>SVG</strong> - Make an SVG for the Heroes of the Storm page and animate it</li>
+			<li><strong>Lazy loading</strong> - Experiment with lazy loading</li>
+		</ol>
+	</div>
+	<footer id="footer">
+		<nav class="footer">
+			<ul>
+				<li><a href="http://www.caiters.com">My portfolio</a></li>
+			</ul>
+		</nav>
+		<nav class="social">
+			<ul>
+				<li><a href="http://www.facebook.com/caitlin.bailey.giroir" class="fa fa-facebook-square"></a></li>
+				<li><a href="http://www.twitter.com/caitorait" class="fa fa-twitter-square"></a></li>
+			</ul>
+		</nav>
+	</footer>
+
+	<script type="text/javascript">
+	(function(){
+		$('#completed').text($('#things li.complete').length);
+		$('#fullList').text($('#things li').length);
+	})();
+	</script>
+</body>
+</html>

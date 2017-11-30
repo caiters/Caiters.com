@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<title>Music Notes Practice Project</title>
+
+<style type="text/css">
+body { background: #000; color: #fff; font-family: 'Georgia', sans-serif; }
+h1 { font-weight: normal; }
+p a { color: #d6c0ff; text-decoration: none; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
+p a:hover { color: #fff; }
+.box { width: 14%; margin: 0 0.142%; height: 60px; background: #ccc; float: left; border: 1px solid #000; box-sizing: border-box; cursor: pointer; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; position: relative; font-family: 'Trebuchet MS', arial; font-size: 20px;}
+
+.c-note { background-color: #585364; border-color: #b6a9ce; }
+.c-note:after { content: 'A'; text-align: center; display: block; line-height: 60px;}
+.c-note:hover { background-color: #e1d1ff; }
+.c-note:active, .c-note.clicked { background-color: #b6a9ce; }
+.d-note { background-color: #574f67; border-color: #ae99d3; }
+.d-note:after { content: 'S'; text-align: center; display: block; line-height: 60px;}
+.d-note:hover { background-color: #d5beff; }
+.d-note:active, .d-note.clicked { background-color: #ae99d3; }
+.e-note { background-color: #4c3f62; border-color: #a085d2; }
+.e-note:after { content: 'D'; text-align: center; display: block; line-height: 60px;}
+.e-note:hover { background-color: #c4a4ff; }
+.e-note:active, .e-note.clicked { background-color: #a085d2; }
+.f-note { background-color: #463563; border-color: #9672d5; }
+.f-note:after { content: 'F'; text-align: center; display: block; line-height: 60px;}
+.f-note:hover { background-color: #b389ff; }
+.f-note:active, .f-note.clicked { background-color: #9672d5; }
+.g-note { background-color: #3e2c60; border-color: #875ed3; }
+.g-note:after { content: 'J'; text-align: center; display: block; line-height: 60px;}
+.g-note:hover { background-color: #a270ff; }
+.g-note:active, .g-note.clicked { background-color: #875ed3; }
+.a-note { background-color: #3e266b; border-color: #7d4ed3; }
+.a-note:after { content: 'K'; text-align: center; display: block; line-height: 60px;}
+.a-note:hover { background-color: #965dff; }
+.a-note:active, .a-note.clicked { background-color: #7d4ed3; }
+.b-note { background-color: #361a69; border-color: #713ad5; }
+.b-note:after { content: 'L'; text-align: center; display: block; line-height: 60px;}
+.b-note:hover { background-color: #8644ff; }
+.b-note:active, .b-note.clicked { background-color: #713ad5; }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+
+  <h1>Audio Player Experiment</h1>
+  <p>Followed along with <a href="http://googlecreativelab.github.io/coder-projects/projects/music_boxes/">Music Boxes project</a>. Afterward, I added key presses as well!</p>
+
+  <audio id="cAudio">
+    <source src="music_notes/c_note.mp3" type="audio/mpeg">
+    <source src="music_notes/c_note.ogg" type="audio/ogg">
+    <source src="music_notes/c_note.wav" type="audio/wav">
+  </audio>
+  <audio id="dAudio">
+    <source src="music_notes/d_note.mp3" type="audio/mpeg">
+    <source src="music_notes/d_note.ogg" type="audio/ogg">
+    <source src="music_notes/d_note.wav" type="audio/wav">
+  </audio>
+  <audio id="eAudio">
+    <source src="music_notes/e_note.mp3" type="audio/mpeg">
+    <source src="music_notes/e_note.ogg" type="audio/ogg">
+    <source src="music_notes/e_note.wav" type="audio/wav">
+  </audio>
+  <audio id="fAudio">
+    <source src="music_notes/f_note.mp3" type="audio/mpeg">
+    <source src="music_notes/f_note.ogg" type="audio/ogg">
+    <source src="music_notes/f_note.wav" type="audio/wav">
+  </audio>
+  <audio id="gAudio">
+    <source src="music_notes/g_note.mp3" type="audio/mpeg">
+    <source src="music_notes/g_note.ogg" type="audio/ogg">
+    <source src="music_notes/g_note.wav" type="audio/wav">
+  </audio>
+  <audio id="aAudio">
+    <source src="music_notes/a_note.mp3" type="audio/mpeg">
+    <source src="music_notes/a_note.ogg" type="audio/ogg">
+    <source src="music_notes/a_note.wav" type="audio/wav">
+  </audio>
+  <audio id="bAudio">
+    <source src="music_notes/b_note.mp3" type="audio/mpeg">
+    <source src="music_notes/b_note.ogg" type="audio/ogg">
+    <source src="music_notes/b_note.wav" type="audio/wav">
+  </audio>
+
+  <div id="instrument">
+    <div id="c" class="c-note box"></div>
+    <div id="d" class="d-note box"></div>
+    <div id="e" class="e-note box"></div>
+    <div id="f" class="f-note box"></div>
+    <div id="g" class="g-note box"></div>
+    <div id="a" class="a-note box"></div>
+    <div id="b" class="b-note box"></div>
+  </div>
+
+  <script type="text/javascript">
+  (function(){
+    $('.box').click(function(){
+      var boxId = $(this).attr('id');
+      var boxAudio = boxId + 'Audio';
+      var boxAudioE = document.getElementById(boxAudio);
+      boxAudioE.currentTime = 0;
+      boxAudioE.play();
+    });
+
+    $(document).keydown(function(e){
+      switch(e.which){
+        case 65: //a
+          $('#c').removeClass('clicked').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        case 83: //s
+          $('#d').removeClass('clicked').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        case 68: //d
+          $('#e').removeClass('clicked').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        case 70: //f
+          $('#f').removeClass('clicked').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        case 74: //j
+          $('#g').removeClass('clicked').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        case 75: //k
+          $('#a').removeClass('clicked').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        case 76: //l
+          $('.box').removeClass('clicked').removeClass('clicked');
+          $('#b').click().addClass('clicked').delay(400).queue(function(){
+            $(this).removeClass('clicked');
+            $(this).dequeue();
+          });
+          break;
+
+        default: return;
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

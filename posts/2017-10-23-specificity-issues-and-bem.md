@@ -1,6 +1,6 @@
 ---
 title: "BEM CSS meets a link color change"
-date: "2017-09-21"
+date: "2017-10-23"
 excerpt: "A cautionary tale."
 ---
 

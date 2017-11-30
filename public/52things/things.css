@@ -1,0 +1,40 @@
+body { background: #170D23; padding: 0; margin: 0; color: #141414; font-family:'proxima-nova', sans-serif; }
+h1 { text-align: center; text-transform: uppercase; line-height: 1.2; margin: 1em 0 2em; color: #fff; font-size: 1em;}
+h1 span { font-family: 'chippewa-falls'; display: block; font-size: 2.5em; text-transform: none; background: #FFD757; text-shadow: 2px 2px 10px rgba(0,0,0,0.1); margin: 0.2em 0 0 0; }
+h1 span:before { content: '·'; display: inline; font-family: 'proxima-nova'; color: #4D2D73;}
+h1 span:after { content: '·'; display: inline; font-family: 'proxima-nova'; color: #4D2D73; padding-left: 0.27em; }
+h2 { text-transform: uppercase; margin-bottom: 0.5em; color: #4D2D73; }
+a { color: #2A4E6E; transition: 0.25s all;}
+p { margin-top: 0; line-height: 1.4; }
+* + * { margin-top: 1rem; }
+li + li { margin-top: 0.25em; }
+
+.container { width: 90%; max-width: 900px; margin: 0.5rem auto; background: #fff; padding: 1rem; box-sizing: border-box; border-radius: 5px; font-size: 0.9em;}
+
+.things { list-style-position: inside; margin: 0; padding: 0;}
+.things li:before { content: '\f096'; position: absolute; left: 0; top: 2px; font-size: 15px; font-family: 'FontAwesome'; color: #666; }
+.things li { padding: 0 0 0 20px; position: relative; }
+.things li.complete:before { content: '\f046'; color: inherit; }
+.things li.complete { color: #4D2D73; }
+.things a:hover { color: #141414; }
+
+#footer { width: 90%; max-width: 900px; margin: 0.5rem auto; }
+#footer ul { list-style: none outside; margin: 0; padding: 0; }
+#footer a { text-decoration: none; font-size: 0.8em; text-transform: uppercase; color: #fff; }
+#footer a:hover { color: #0d95d4; }
+nav.footer { float: left; }
+nav.social { float: right; margin-top: 0; font-size: 1.5em; }
+nav.social li { float: left; margin: 0; }
+nav.social li + li { margin-left: 0.5em; }
+
+@media(min-width:400px){
+	h1 { font-size: 1.5em; }
+	.container { font-size: 1em; padding: 1.5rem; }
+}
+
+@media(min-width:560px){
+	h1 { font-size: 2em; }
+	.container { padding: 2rem; }
+}
+
+/*# sourceMappingURL=things.css.map */
