@@ -10,11 +10,11 @@ Hopefully I’ll be able to get back into the swing of things and write here mor
 * [24 Ways](http://24ways.org/) – The best description is right off the front page of the website: “24 ways is the advent calendar for web geeks. Each day throughout December we publish a daily dose of web design and development goodness to bring you all a little Christmas cheer.”
 * [A List Apart](http://www.alistapart.com/articles/) – I’m pretty sure that everyone knows about this, but you can’t just leave it out :) really fantastic articles from really smart people.
 * [CSS Tricks](http://css-tricks.com/) – Lots of neat CSS tricks to be learned here.
-* [Finch Fresh Thinking](http://www.getfinch.com/blog/) – Thought-provoking articles on design
+* [Finch Fresh Thinking](http://archived.getfinch.com/) – Thought-provoking articles on design
 * [Jens Meiert](http://meiert.com/en/) – “Jens O. Meiert (Google, W3C, O’Reilly) on professional web design, web development, accessibility, and usability.”
 * [jQuery for Designers](http://jqueryfordesigners.com/) – I’m ashamed to admit it, but I like to just have things work in JS and not have to play with it forever. jQuery makes my life easy for this, so this site is kind of perfect.
 * [Just Creative Design](http://justcreativedesign.com/) – Fun to read articles on web and logo design
-* [Kimili](http://kimili.com/) – Pretty sure this is a friend of an old coworker of mine. I’ve enjoyed reading the seldom blog posts though and have used some of the techniques he has written about.
+* Kimili – (link defunct) Pretty sure this is a friend of an old coworker of mine. I’ve enjoyed reading the seldom blog posts though and have used some of the techniques he has written about.
 * [Pro Blog Design](http://www.problogdesign.com/blog/) – Many helpful WordPress tips here.
 * [SitePoint](http://www.sitepoint.com/) – Lots of assorted articles that are generally helpful for web development. They also sell books if you are so inclined to buy some.
 * [Smashing Magazine](http://www.smashingmagazine.com/) – Yet another site with lots of helpful articles about a wide variety of topics relevant to web designers/devs.
@@ -36,7 +36,7 @@ People in the web design/development world I like to follow. I think these are a
 
 Not updated but I still keep an eye on it and may use old articles for reference:
 
-* [Blog Design Blog](http://www.blogdesignblog.com/) – Blog on blog design. Surprise!
-* [Accessites.org](http://accessites.org/site/) – Web accessibility
+* Blog Design Blog – (link defunct) Blog on blog design. Surprise!
+* Accessites.org – (link defunct) Web accessibility
 
 I think that hits the majority of them. Of course, there are also some sites I don’t follow regularly but still grab some articles off of them that I like. You can always find a [list of the web dev related bookmarks I’ve made on delicious](http://delicious.com/caiters).
