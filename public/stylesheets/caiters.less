@@ -170,24 +170,29 @@ img {
   &--main {
     font-size: 2.5em;
     margin-top: 0;
+    @media (min-width: 768px){
+      font-size: 3em;
+    }
   }
   &--secondary {
     font-size: 1.5em;
     line-height: 1.1;
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
   }
   &--tertiary {
     font-size: 1.3em;
     font-weight: @thin;
-  }
-  @media (min-width: 768px) {
-    &--main {
-      font-size: 3em;
-    }
-    &--secondary {
-      font-size: 2em;
-    }
-    &--tertiary {
+    @media (min-width: 768px){
       font-size: 1.5em;
+    }
+  }
+  &--resume {
+    text-align: center;
+    font-size: 3em;
+    @media (min-width: 768px){
+      font-size: 3em;
     }
   }
 }
@@ -958,7 +963,7 @@ img {
   text-align: center;
   font-weight: bold;
   align-self: center;
-  font-size: 3em;
+  font-size: 2.5em;
   color: #fff;
 }
 .heading--work + * {
@@ -976,15 +981,17 @@ img {
 }
 
 .work-content {
-  padding: 1em;
+  margin-top: 1em;
   > *:first-child {
     margin-top: 0;
   }
 }
 
-.job-title {
+.job-title, .schooling-info {
   margin: 0;
   text-transform: uppercase;
+  text-align: center;
+  align-self: center;
   em {
     font-style: normal;
     text-transform: none;
@@ -1029,18 +1036,14 @@ img {
   grid-auto-flow: dense;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   &--skills {
-    grid-template-columns: repeat(9, 1fr);
-    border-top: 10px solid #fff;
+    grid-template-columns: repeat(8, 1fr);
     margin-bottom: 5rem;
     .resume-item { min-height: 5vw; text-align: center; align-items: center; }
-  }
-  &--education {
-    border-top: 10px solid #fff;
   }
 }
 
 .resume-item {
-  padding: 1rem;
+  padding: 2.5rem;
   box-sizing: border-box;
   color: rgb(228, 228, 228);
   min-height: 12.5vw;
@@ -1073,6 +1076,9 @@ img {
   }
   &--wide {
     grid-column-end: span 2;
+    &:empty {
+      background-size: 100% auto;
+    }
   }
   &--tall {
     grid-row-end: span 2;
