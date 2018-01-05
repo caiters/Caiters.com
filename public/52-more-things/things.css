@@ -17,6 +17,9 @@ li + li { margin-top: 0.25em; }
 .things li.complete:before { content: '\f046'; color: inherit; }
 .things li.complete { color: #4D2D73; }
 .things a:hover { color: #141414; }
+.things li > * { margin-top: 0; }
+.things .view { display: inline-block; margin-left: 1em; background:#4D2D73; color: #fff; padding: 3px; text-decoration: none; border-radius: 3px; font-size: 0.8em; }
+.things .view:hover { color: #fff; background-color: #000; }
 
 #footer { width: 90%; max-width: 900px; margin: 0.5rem auto; }
 #footer ul { list-style: none outside; margin: 0; padding: 0; }

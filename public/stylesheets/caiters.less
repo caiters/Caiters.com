@@ -955,6 +955,11 @@ img {
 
 .heading--work {
   margin-bottom: 0;
+  text-align: center;
+  font-weight: bold;
+  align-self: center;
+  font-size: 3em;
+  color: #fff;
 }
 .heading--work + * {
   margin-top: 0;
@@ -979,10 +984,12 @@ img {
 
 .job-title {
   margin: 0;
+  text-transform: uppercase;
   em {
     font-style: normal;
+    text-transform: none;
     font-size: 0.8em;
-    color: #666;
+    color: rgba(255,255,255,0.7);
     display: block;
     &:before {
       content: '(';
@@ -1013,6 +1020,66 @@ img {
       width: 50%;
       float: left;
     }
+  }
+}
+
+// resume grid
+.resume-grid {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  &--skills {
+    grid-template-columns: repeat(9, 1fr);
+    border-top: 10px solid #fff;
+    margin-bottom: 5rem;
+    .resume-item { min-height: 5vw; text-align: center; align-items: center; }
+  }
+  &--education {
+    border-top: 10px solid #fff;
+  }
+}
+
+.resume-item {
+  padding: 1rem;
+  box-sizing: border-box;
+  color: rgb(228, 228, 228);
+  min-height: 12.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin:0;
+  border: 0.25vw solid rgba(255,255,255,0.5);
+  &--heading {
+    font-weight: @bold;
+    font-size: 5vw;
+    color: #fff;
+  }
+  &:nth-child(4n) {
+    background-color: #311653;
+  }
+  &:nth-child(4n+1) {
+    background-color: #432A45;
+  }
+  &:nth-child(4n+2) {
+    background-color: #223249;
+  }
+  &:nth-child(4n+3) {
+    background-color: #444B53;
+  }
+  &:empty {
+    background-image: url('../images/banner-generic.jpg');
+    background-size: auto 100%;
+  }
+  &--wide {
+    grid-column-end: span 2;
+  }
+  &--tall {
+    grid-row-end: span 2;
+  }
+  &--large {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
   }
 }
 

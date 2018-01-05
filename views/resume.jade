@@ -1,92 +1,95 @@
 extends layout
 
 block content
-  header.page-header
-    h1.heading--main.heading Résumé
-    
-  div.inner-wrap.text--body.section-padding
-            
-    h2.heading--secondary.heading Relevant Work Experience
-    
-    ul.work-list
-      li.work-list__item
-        h3.heading--tertiary.heading.heading--work Web Advanced
-        p.job-title Lead Front End Developer #[em April 2016 - Present]
-        p.job-title Front End Developer #[em February 2012 - April 2016]
-        div.work-content
-          p I collaborate with small teams to develop websites for our clients.
-          ul
-            li Front end dev on approximately 100 projects on various platforms
-            li Developed workflow for cross-browser and device testing websites
-            li Leading front end team push for web accessibility, performance, and component-based design
-            li Training new team members on our best practices
-      li.work-list__item
-        h3.heading--tertiary.heading.heading--work Freelance
-        p.job-title Owner #[em August 2008 - Present]
-        div.work-content
-          p I work with clients to bring their visions for their sites to life.
-          ul
-            li Front end for marketing landing pages for Corus Entertainment
-            li Maintenance work on GenieCompany.com
-            li Various WordPress blogs and websites
-      li.work-list__item
-        h3.heading--tertiary.heading.heading--work Berklee Online (formerly Berklee Media / Berkleemusic.com)
-        p.job-title Front End Developer #[em May 2009 - January 2012]
-        div.work-content
-          p I created new marketing pages and HTML emails during big marketing pushes, and the rest of the time updated old legacy sections of the website with new designs and standards-compliant HTML.
-          ul
-            li Implemented new designs for the homepage, various landing pages, and other parts of the berkleemusic.com site (now online.berklee.edu)
-            li Created and implemented designs for emails, landing pages, and pages to go on partners' websites
-            li Worked with development and design teams to release the Berklee Music Network
-            li Worked with a team to implement new design for Berklee's learning management system, which handles the Berklee online courses
-      li.work-list__item
-        h3.heading--tertiary.heading.heading--work The Christian Science Monitor
-        p.job-title HTML Production Assistant #[em June 2007 - May 2009]
-        div.work-content
-          p I started keeping the front page of the website updated with the latest news, and later I was moved to the development team to work on our wordpress microsites and prepare for an upcoming redesign and new CMS.
-          ul
-            li Worked with the web production team to keep the homepage updated with new and relevant news throughout the day
-            li Created a flash audio player to play audio files on the front page of the site
-            li Worked with the development team to help complete a new Christian Science Monitor political site for coverage of the 2008 elections
-            li I worked as part of a two person development team (a designer and myself) on the Little Bill Clinton minisite, which won an Online Media Marketing and Advertising Award (OMMA) in Web site excellence in 2008
-      
-    h2.heading--secondary.heading Relevant Skills and Software
-    p This is not a comprehensive list, but should touch on the things I thought I would be most relevant. If you have any questions, feel free to contact me!
-    div.skills.group
-      div.skills__comfortable
-        h3.heading--tertiary.heading I'm comfortable with...
+  h1.heading--main.heading Résumé
+
+  div.resume-grid
+    h2.heading--secondary.heading.resume-item.resume-item--wide.resume-item--heading Experience
+    div.resume-item
+    div.resume-item.resume-item--large
+      h3.heading--tertiary.heading.heading--work Web Advanced
+      p.job-title Lead Front End Developer #[em April 2016 - Present]
+      p.job-title Front End Developer #[em February 2012 - April 2016]
+      div.work-content
+        p I collaborate with small teams to develop websites for our clients.
         ul
-          li HTML
-          li CSS (BEM naming is my jam)
-          li Creating responsive websites
-          li jQuery
-          li Browser compatibility (extensive IE8+ experience, also IE6/7)
-          li HTML5 Audio &amp; Video
-          li Web accessibility
-          li Front-end performance
-          li AngularJS, VueJS
-          li CMS: Sitefinity, WordPress, BigCommerce, Orchard and more
-          li HTML e-mails (including responsive emails)
-          li SVG
-      div.skills__learning
-        h3.heading--tertiary.heading I've used the following software...
+          li Front end dev on approximately 100 projects on various platforms
+          li Developed workflow for cross-browser and device testing websites
+          li Leading front end team push for web accessibility, performance, and component-based design
+          li Training new team members on our best practices
+    div.resume-item.resume-item--large
+      h3.heading--tertiary.heading.heading--work Freelance
+      p.job-title Owner #[em August 2008 - Present]
+      div.work-content
+        p I work with clients to bring their visions for their sites to life.
         ul
-          li Photoshop
-          li Zeplin
-          li Jira, Trello, TeamworkPM
-          li Invision, Zeplin
-          li Wordpress, BigCommerce, Sitefinity
-          li Version control software (Git, SVN, Mercurial)
-          li Illustrator
-        h3.heading--tertiary.heading I've been learning about...
+          li Front end for marketing landing pages for Corus Entertainment
+          li Maintenance work on GenieCompany.com
+          li Various WordPress blogs and websites
+    div.resume-item.resume-item--large
+      h3.heading--tertiary.heading.heading--work Berklee Online
+      p.job-title Front End Developer #[em May 2009 - January 2012]
+      div.work-content
+        p I created new marketing pages and HTML emails during big marketing pushes, and the rest of the time updated old legacy sections of the website with new designs and standards-compliant HTML.
         ul
-          li Preact
-          li NodeJS
-      
-    h2.heading--secondary.heading Education and Activities
-    h3.heading--tertiary.heading University of Massachusetts, Amherst
-    span.dates Fall 2002 - Spring 2007
-    ul
-      li Graduated with a Bachelor's Degree with Individual Concentration (BDIC) in Computer Graphics and Design (BA) and Japanese Minor
-      li I was an Undergraduate Teaching Assistant For Fundamentals of Graphic Communication (2004-2007) - responsibilities included teaching a lecture (my chosen lecture was on interface design relating to video games), helping students with technical difficulties during lab classes, and meeting students outside of class for office hours.
-      li President of the UMass Video Game Club (2004-2005)
+          li Implemented new designs for the homepage, various landing pages, and other parts of the berkleemusic.com site (now online.berklee.edu)
+          li Created and implemented designs for emails, landing pages, and pages to go on partners' websites
+          li Worked with development and design teams to release the Berklee Music Network
+          li Worked with a team to implement new design for Berklee's learning management system, which handles the Berklee online courses
+    div.resume-item.resume-item--tall
+    div.resume-item
+    div.resume-item
+    div.resume-item
+    div.resume-item.resume-item--large
+      h3.heading--tertiary.heading.heading--work The Christian Science Monitor
+      p.job-title HTML Production Assistant #[em June 2007 - May 2009]
+      div.work-content
+        ul
+          li Worked with the web production team to keep the homepage updated with new and relevant news throughout the day
+          li Created a flash audio player to play audio files on the front page of the site
+          li Worked with the development team to help complete a new Christian Science Monitor political site for coverage of the 2008 elections
+          li I worked as part of a two person development team (a designer and myself) on the Little Bill Clinton minisite, which won an Online Media Marketing and Advertising Award (OMMA) in Web site excellence in 2008
+    div.resume-item
+    div.resume-item.resume-item--large
+      h3.heading--tertiary.heading.heading--work UMass Amherst
+      span.dates Fall 2002 - Spring 2007
+      ul
+        li Graduated with a Bachelor's Degree with Individual Concentration (BDIC) in Computer Graphics and Design (BA) and Japanese Minor
+        li I was an Undergraduate Teaching Assistant For Fundamentals of Graphic Communication (2004-2007) - responsibilities included teaching a lecture (my chosen lecture was on interface design relating to video games), helping students with technical difficulties during lab classes, and meeting students outside of class for office hours.
+        li President of the UMass Video Game Club (2004-2005)
+    div.resume-item
+
+  div.resume-grid.resume-grid--skills
+    h2.heading--secondary.heading.resume-item.resume-item--wide.resume-item--heading Skills
+    div.resume-item
+      span HTML
+    div.resume-item
+      span CSS
+    div.resume-item
+      span Responsive Websites
+    div.resume-item
+      span HTML5 Audio &amp; Video
+    div.resume-item
+      span JavaScript
+    div.resume-item
+      span Browser compatibility
+    div.resume-item
+      span Web Accessibility
+    div.resume-item
+      span Vue.js
+    div.resume-item
+      span Invision
+    div.resume-item
+      span Zeplin
+    div.resume-item
+      span Jira
+    div.resume-item
+      span Photoshop
+    div.resume-item
+      span Sitefinity
+    div.resume-item
+      span Trello
+    div.resume-item
+      span Git
+    div.resume-item
+      span Performance
