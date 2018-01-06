@@ -960,11 +960,11 @@ img {
 
 .heading--work {
   margin-bottom: 0;
+  margin-top: 0;
   text-align: center;
   font-weight: bold;
   align-self: center;
   font-size: 2.5em;
-  color: #fff;
 }
 .heading--work + * {
   margin-top: 0;
@@ -985,6 +985,7 @@ img {
   > *:first-child {
     margin-top: 0;
   }
+  &__list { padding-left: 1em; }
 }
 
 .job-title, .schooling-info {
@@ -996,8 +997,10 @@ img {
     font-style: normal;
     text-transform: none;
     font-size: 0.8em;
-    color: rgba(255,255,255,0.7);
     display: block;
+    @media (min-width: 768px) {
+      color: rgba(255,255,255,0.7);
+    }
     &:before {
       content: '(';
     }
@@ -1032,47 +1035,62 @@ img {
 
 // resume grid
 .resume-grid {
-  display: grid;
-  grid-auto-flow: dense;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 768px) {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
   &--skills {
-    grid-template-columns: repeat(8, 1fr);
     margin-bottom: 5rem;
     .resume-item { min-height: 5vw; text-align: center; align-items: center; }
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
 }
 
 .resume-item {
-  padding: 2.5rem;
   box-sizing: border-box;
-  color: rgb(228, 228, 228);
-  min-height: 12.5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin:0;
-  border: 0.25vw solid rgba(255,255,255,0.5);
+  width: 100%;
+  padding: 1rem;
+  @media (min-width: 768px) {
+    min-height: 12.5vw;
+    border: 0.25vw solid rgba(255,255,255,0.5);
+    padding: 2.5rem;
+    color: rgb(228, 228, 228);
+    &:nth-child(4n) {
+      background-color: #311653;
+    }
+    &:nth-child(4n+1) {
+      background-color: #432A45;
+    }
+    &:nth-child(4n+2) {
+      background-color: #223249;
+    }
+    &:nth-child(4n+3) {
+      background-color: #444B53;
+    }
+  }
   &--heading {
     font-weight: @bold;
     font-size: 5vw;
-    color: #fff;
-  }
-  &:nth-child(4n) {
-    background-color: #311653;
-  }
-  &:nth-child(4n+1) {
-    background-color: #432A45;
-  }
-  &:nth-child(4n+2) {
-    background-color: #223249;
-  }
-  &:nth-child(4n+3) {
-    background-color: #444B53;
+    @media (min-width:768px) {
+      color: #fff; 
+    }
   }
   &:empty {
-    background-image: url('../images/banner-generic.jpg');
-    background-size: auto 100%;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      background-image: url('../images/banner-generic.jpg');
+      background-size: auto 100%;
+    }
   }
   &--wide {
     grid-column-end: span 2;
