@@ -1038,12 +1038,18 @@ img {
   @media (min-width: 768px) {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 1150px){
+    grid-template-columns: repeat(5, 1fr);
   }
   &--skills {
     margin-bottom: 5rem;
     .resume-item { min-height: 5vw; text-align: center; align-items: center; }
     @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: 1150px) {
       grid-template-columns: repeat(8, 1fr);
     }
   }
@@ -1058,6 +1064,11 @@ img {
   margin:0;
   width: 100%;
   padding: 1rem;
+  &--only-tab-desk { display: none; }
+  @media (min-width: 768px) and (max-width: 1149px) {
+    &--only-tab-desk { display: block; }
+    &--not-tab-desk { display: none; }
+  }
   @media (min-width: 768px) {
     min-height: 12.5vw;
     border: 0.25vw solid rgba(255,255,255,0.5);
@@ -1080,7 +1091,7 @@ img {
     font-weight: @bold;
     font-size: 5vw;
     @media (min-width:768px) {
-      color: #fff; 
+      color: #fff;
     }
   }
   &:empty {
@@ -1088,8 +1099,8 @@ img {
       display: none;
     }
     @media (min-width: 768px) {
-      background-image: url('../images/banner-generic.jpg');
       background-size: auto 100%;
+      background-image: url('../images/banner-generic.jpg');
     }
   }
   &--wide {
