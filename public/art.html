@@ -20,13 +20,35 @@
         height: 55px;
         content: '';
         display: block;
-        background:rgb(197, 144, 29);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c5901d+29,dba843+51,c5901d+76 */
+        background: #c5901d; /* Old browsers */
+        background: -moz-linear-gradient(top, #c5901d 29%, #dba843 51%, #c5901d 76%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #c5901d 29%,#dba843 51%,#c5901d 76%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #c5901d 29%,#dba843 51%,#c5901d 76%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         position: absolute;
         border-radius: 100% 100% 50px 50px;
         left: -150px;
         top: -305px;
         box-shadow: -1px -2px 0 3px rgb(170, 123, 23),
           0 2px 0 1px rgb(214, 170, 24);
+      }
+      .p:after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border-radius: 100%;
+        z-index: 1;
+        position: relative;
+        box-shadow: 1px -100px 0px rgb(185, 22, 0),
+          -40px -150px 0px rgb(185, 22, 0),
+          50px -240px 0px rgb(185, 22, 0),
+          -35px -215px 0px rgb(185, 22, 0),
+          30px -180px 0px rgb(185, 22, 0),
+          -90px -230px 0px rgb(185, 22, 0),
+          -15px -55px 0 rgb(185, 22, 0)
+          ;
       }
     </style>
   </head>
