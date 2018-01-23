@@ -17,9 +17,22 @@
   // contact form
   if( $('#contactForm').length>0){
 
+    var spamPhrases = ["private loan", "qualified lender", "targeted traffic", "targeted visitors", "powerful and private web traffic", "credit or collateral"];
+
+    function spamFree(message) {
+      var isLegit = true;
+      spamPhrases.forEach(function(phrase){
+        if(message.indexOf(phrase) > 0) {
+          isLegit = false;
+        }
+      });
+      return isLegit;
+    }
+
     // submit form
     $('#contactForm').submit(function(e){
       e.preventDefault();
+
       if( $('#sendmsg').hasClass('btn--submitting') ){
         // do nothing...
       } else {
@@ -32,21 +45,29 @@
             'message': $('textarea[name=message]').val(),
           };
 
-          $.ajax({
-            type: 'POST',
-            url: '/contact',
-            data: formData,
-            dataType: 'json',
-            encode: true
-          }).done(function(data){
-            $('#sendmsg').removeClass('btn--submitting');
-            $('#formMsgSubmit').text(data.msg).removeClass('form-msg--hidden');
-            if(data.err){
-              $('#formMsgSubmit').addClass('form-msg--error');
-            } else {
-              $('#formMsgSubmit').removeClass('form-msg--error').addClass('form-msg--success');
-            }
-          });
+          if(spamFree(formData.message)){
+            $.ajax({
+              type: 'POST',
+              url: '/contact',
+              data: formData,
+              dataType: 'json',
+              encode: true
+            }).done(function(data){
+
+              $('#sendmsg').removeClass('btn--submitting');
+              $('#formMsgSubmit').text(data.msg).removeClass('form-msg--hidden');
+              if(data.err){
+                $('#formMsgSubmit').addClass('form-msg--error');
+              } else {
+                $('#formMsgSubmit').removeClass('form-msg--error').addClass('form-msg--success');
+              }
+            });
+          } else {
+            setTimeout(function(){
+              $('#sendmsg').removeClass('btn--submitting');
+              $('#formMsgSubmit').text('Huzzah!').removeClass('form-msg--hidden');
+            }, 500);
+          }
         }
       }
     });
