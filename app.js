@@ -39,15 +39,32 @@ app.post('/contact', function(req,res){
     html: '<b>from</b>:' + req.body.name + ' &lt;' + req.body.email + '&gt;<br/><b>message</b>: ' + req.body.message
   };
 
-  transporter.sendMail(mailOpts, function(error, response){
-    if (error) {
-      // Email not sent
-      res.json({ msg: 'Error occured - message not sent', err:true });
-    } else {
-      // Email sent!
-      res.json({ msg: 'Message sent! Thank you.', err:false });
+  var spamPhrases = ["private loan", "qualified lender", "targeted traffic", "targeted visitors", "powerful and private web traffic", "credit or collateral", "bitcoin"];
+
+    function spamFree(message) {
+      var isLegit = true;
+      spamPhrases.forEach(function(phrase){
+        if(message.indexOf(phrase) >= 0) {
+          isLegit = false;
+        }
+      });
+      return isLegit;
     }
-  });
+
+    if(spamFree(req.body.message)) {
+        transporter.sendMail(mailOpts, function(error, response){
+            if (error) {
+              // Email not sent
+              res.json({ msg: 'Error occured - message not sent', err:true });
+            } else {
+              // Email sent!
+              res.json({ msg: 'Message sent! Thank you.', err:false });
+            }
+          });
+    } else {
+        res.json({ msg: 'Error occured - message not sent', err:true });
+    }
+
 });
 
 app.use('/', routes);
@@ -67,7 +84,6 @@ if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
-      message: err.message,
       error: err
     });
   });
