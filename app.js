@@ -39,7 +39,7 @@ app.post('/contact', function(req,res){
     html: '<b>from</b>:' + req.body.name + ' &lt;' + req.body.email + '&gt;<br/><b>message</b>: ' + req.body.message
   };
 
-  var spamPhrases = ["private loan", "qualified lender", "targeted traffic", "targeted visitors", "powerful and private web traffic", "credit or collateral", "bitcoin"];
+  var spamPhrases = ["private loan", "qualified lender", "backlink", "search engine rankings", "targeted traffic", "targeted visitors", "powerful and private web traffic", "credit or collateral", "bitcoin"];
 
     function spamFree(message) {
       var isLegit = true;
