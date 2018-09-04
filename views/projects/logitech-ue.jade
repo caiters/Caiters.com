@@ -1,0 +1,60 @@
+extends ../layout
+
+block content
+    header.page-header.recent-project--ue
+        h1.heading--main.heading.no-b-margin Logitech Ultimate Ears
+    div.inner-wrap.text--body.section-padding
+        p.text--lead.text--centered Custom In-Ear Monitor Configurator
+        a(href="#", target="_blank")
+            img.img--centered.margin-bottom-3.img--bordered(src="/images/website-ue.jpg", alt="Ultimate Ears website screenshot")
+        p.text--centered
+            a.btn.btn--solid(href="#", target="_blank") Link TBA
+
+        div.project-body
+            ul.project-info
+                li.project-info__block
+                    strong.project-info__name CMS:
+                    | Custom .net MVC admin
+                li.project-info__block
+                    strong.project-info__name Browser Support:
+                    | IE11, Modern Browsers
+                li.project-info__block
+                    strong.project-info__name Type:
+                    | Single Page App
+            h2.heading.heading--secondary About This Project
+            p.
+                (Link incoming once project is live to the public)
+            p.
+                This project was my baby for a few months this year (2018) and was an absolute blast to work on. It consisted of a number of pieces:
+            ul
+                li Vue.js with Vuex
+                li Fabric.js
+                li A custom .net admin from which I received data via api endpoints for details about the IEMs and to which I submitted orders
+            p.
+                This was my first big Vue project (I had worked on a handful of smaller Vue apps at home and at work) and also the first time I used Fabric. Also, while I'd used Vue before, I had never used the SFCs (Single File Components) and had not used a webpack build either. So there were a ton of firsts for me on this project and a ton of stuff to learn.
+
+            p.
+                So first of all - webpack. I'd never used it before and wanted to figure out what it was like to set it up manually (without Vue CLI). Ultimately that might have been a mistake (only because it actually made adding some things later somewhat difficult -- with all the different webpack versions and the way I set it up, I was not finding examples consistent with it online when I had questions). I did like getting to understand a little more about how Webpack works, but I think next time I'm just going to go with the CLI (and will learn about Webpack another way where it doesn't have a risk of impacting my productivity).
+
+            p.
+                I also had never used Canvas before, though granted almost everything I did with it was actually through Fabric (which again, I had never used). Another developer on the team had created a proof of concept early on in the discovery process to make sure we could accomplish what we wanted to do, and at first I made the mistake of just trying to port over that code so I could focus on the other pieces. It was nice for not being overwhelmed early on, but the end result is that I didn't really understand what some of the Fabric-centric pieces were doing and ultimately ended up rewriting them anyway so I'd have a better understanding of what was going on.
+
+            p.
+                Best thing about this project hands down? When I noticed parts of the app were difficult to work in, I made time to refactor during the project. I've done that in the past but nowhere near on this scale. I had always rationalized it before because being in an agency, time is literally money and I could be doing new development. What I didn't consider however was that the time spent refactoring would ultimately make all future development on that project faster and more enjoyable, so it was definitely worth the effort.
+
+            p.
+                Because I didn't spend enough time on new stuff, I also decided I wanted to learn unit testing. I decided to start with a couple of simple components. While I started far too late in the project to actually test every component, it definitely gave me the motivation I needed to start unit testing from the beginning of my next Vue project (or any other project where unit testing would make sense).
+
+            p.
+                Anyway, this project was SUPER fun. I wrote more ES6 on this project than I ever have and it definitely helped me get some of the syntax down that I had been struggling to remember at the beginning of the project. I got to play with some new libraries, learn unit testing with Jest, and work more with Vue (which is always a pleasure). Looking forward to the next time I get a project like this coming down the pipeline!
+
+            h2.heading.heading--secondary Lessons Learned
+            ul
+                li.
+                    Unit testing is relatively simple and definitely helps ensure that you completely understand the component you're building. I'm looking forward to unit testing a project from the beginning next time.
+                li.
+                    While I hit a number of challenges at first with using Fabric.js and Vue together, in the end they worked together quite well and I was super thrilled to have all of the Fabric.JS data living in Vuex.
+                li.
+                    I used an event bus for a few things and Vuex for others. While I do not know if Vuex was the appropriate solution for everything, sometimes the event bus felt like overkill. I'd like to learn a little more about how I can avoid that feeling next time.
+                li.
+                    While learning Webpack better was a noble goal, I definitely spent a lot of time doing Webpack things when I'd wished I was just doing javascript things. Next time I'll use the Vue CLI and I will have to set aside some non-project time to learn more about Webpack. (Also from what I've heard, Webpack 4 is going to change a lot of this anyway.)
