@@ -1,12 +1,12 @@
 extends ../layout
 
 block content
-    header.page-header.recent-project--ue-boom
+    header.page-header.recent-project--boom
         h1.heading--main.heading.no-b-margin Logitech Ultimate Ears
     div.inner-wrap.text--body.section-padding
         p.text--lead.text--centered myBOOM 3
         a(href="https://studio.ultimateears.com/", target="_blank")
-            img.img--centered.margin-bottom-3.img--bordered(src="/images/website-ue.jpg", alt="Ultimate Ears website screenshot")
+            img.img--centered.margin-bottom-3.img--bordered(src="/images/website-boom.jpg", alt="myBOOM 3 website screenshot")
         p.text--centered
             a.btn.btn--solid(href="https://studio.ultimateears.com/", target="_blank") Website Link
 
@@ -23,9 +23,17 @@ block content
                     | Single Page App
             h2.heading.heading--secondary About This Project
             p.
-                stuff
+                The goal with this project was to allow customers to customize their own BOOM 3 speakers with different fabric and component color combinations.
+                I was the primary front-end developer on this project, with a coworker of mine helping with the Feeling Lucky section to get the first pass at
+                randomization completed.
+            p.
+                This project was built using Vue with Vuex, Vue Router, and Fabric.js.
 
             h2.heading.heading--secondary Lessons Learned
             ul
                 li.
-                    yikes
+                    Apparently you can't animate clip-path over a canvas element in the latest version of Safari. That was a super fun bug to track down!
+                    Ultimately I ended up with a codepen with the most simple version of the issue I could think of - animating a clip path that happened to
+                    have a tiny canvas inside the area that was animating. Unfortunately, at least from my testing I wasn't able to find a good way to detect
+                    whether this issue was occuring or not - the browser definitely "thinks" the animation is occurring, as the animationend event still fires.
+                    Super weird!

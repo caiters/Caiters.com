@@ -1,5 +1,8 @@
 extends layout
 
+block pageTitle
+  title Résumé | Caitlin Bailey, Front End Web Developer
+
 block content
   header.page-header
     h1.heading--main.heading Résumé
@@ -10,20 +13,21 @@ block content
   div.resume-grid
     div.resume-item.resume-item--large
       h3.heading--tertiary.heading.heading--work Web Advanced
-      p.job-title Lead Front End Developer #[em April 2016 - Present]
+      p.job-title Manager of Front-End Development #[em April 2019 - Present]
+      p.job-title Lead Front End Developer #[em April 2016 - April 2019]
       p.job-title Front End Developer #[em February 2012 - April 2016]
       div.work-content
         ul.work-content__list
+          li Managing a small team of front-end developers - helping grow existing team members, train new team members, perform code reviews, and organize lunch &amp; learn meetings.
           li Primary front end dev on numerous websites - microsites, full redesigns, and website maintenance. Numerous content management systems including Sitefinity, Ektron, WordPress, and Orchard. Select projects include:
             ul
               li Logitech Ultimate Ears configurator: Vue.js, JS (ES6), BEM CSS
               li StockCross Account Signup Application: AngularJS, Vue.js
-              li Kwikset.com redesign: Sitefinity CMS, Angular 2, jQuery, BEM CSS
-              li LendingQB (Full stack dev): PHP, BEM CSS, jQuery
+              li Kwikset.com redesign: Sitefinity CMS, Angular 5, jQuery, BEM CSS
+              li LendingQB (Full stack development, static site): PHP, BEM CSS, jQuery
               li Kwikset Kevo microsite: Sitefinity CMS, BEM CSS, jQuery
           li Developed internal testing plan for cross-browser and device compatibility for websites
           li Leading front end team push for web accessibility, performance, and component-based design
-          li Training new team members on BEM, weekly code reviews with team members, organizing "lunch and learn" meetings
     div.resume-item.resume-item--only-tab-desk
     div.resume-item.resume-item--wide.resume-item--not-tab-desk
     div.resume-item.resume-item--tall
@@ -32,6 +36,7 @@ block content
       div.work-content
         ul.work-content__list
           li Front end for marketing landing pages for Corus Entertainment
+          li Landing pages for Gartner
           li Maintenance work on GenieCompany.com
           li Various WordPress blogs and websites
     div.resume-item.resume-item--large
@@ -69,7 +74,7 @@ block content
           li President of the UMass Video Game Club (2004-2005)
     div.resume-item.resume-item--only-tab-desk
 
-  h2.heading--secondary.heading.heading--resume Skills
+  h2.heading--secondary.heading.heading--resume Skills &amp; Software
 
   div.resume-grid.resume-grid--skills
     div.resume-item

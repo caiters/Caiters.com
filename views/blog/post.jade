@@ -1,5 +1,8 @@
 extends layout-blog
 
+block pageTitle
+  title #{title} | Caitlin Bailey, Front End Web Developer
+
 block post
   header.page-header
     date.blog-date(datetime="#{date}") #{moment(date).format("MMM D, YYYY")}
